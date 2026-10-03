@@ -1,0 +1,688 @@
+{
+  "name": "Jerson Caibog",
+  "initials": "JC",
+  "title": "Software Engineer",
+  "location": "Makati City, Metro Manila, Philippines",
+  "contact": {
+    "email": "jersoncaibog1@gmail.com",
+    "phone": "+63 927 324 0956"
+  },
+  "links": {
+    "github": "https://github.com/jersoncaibog",
+    "linkedin": "https://www.linkedin.com/in/jerson-caibog/",
+    "portfolio": null,
+    "resume": null
+  },
+  "summary": "Software Engineer with hands-on experience designing and delivering end-to-end web applications. Skilled in architecture, scalable system design, and frontend-to-backend integration, with expertise in database modeling, API development, and performance optimization. Proven ability to build production-ready, maintainable solutions and collaborate across cross-functional teams to deliver impactful, user-centric products.",
+  "experience": [
+    {
+      "role": "Full Stack Developer",
+      "company": "Prostrive BV",
+      "location": "Netherlands (Remote)",
+      "start": "2026-02",
+      "end": null,
+      "highlights": [],
+      "projects": [
+        {
+          "name": "Multi-Tenant Affiliate & Giveaway Platform",
+          "stack": [
+            "Next.js 16",
+            "TypeScript",
+            "Supabase (Postgres)",
+            "Tailwind v4",
+            "Turborepo",
+            "Vercel"
+          ],
+          "highlights": [
+            {
+              "label": "Architecture",
+              "text": "Built and shipped a multi-tenant platform running 8 production deployments (4 public streamer sites, 4 admin panels) from one Turborepo codebase and database, with a shared typed API layer of 65+ functions."
+            },
+            {
+              "label": "Database & Security",
+              "text": "Designed an 18-table Postgres schema with row-level security enforcing admin/editor roles at the database layer, plus a full audit log of staff actions and 2FA-secured staff invitations."
+            },
+            {
+              "label": "Admin Suite",
+              "text": "Delivered 10 admin screens covering affiliate offer management with drag-and-drop ranking, giveaway and raffle lifecycles through winner selection, bulk media management, taxonomy, menus, and SEO controls."
+            },
+            {
+              "label": "Fraud Prevention & Analytics",
+              "text": "Flagged duplicate giveaway entries by shared IP and device fingerprint, enforced one entry per account in the database, and built a click-through analytics dashboard with server-rendered SVG sparklines, with no charting dependency."
+            }
+          ]
+        },
+        {
+          "name": "Prostrive Corporate Marketing Site",
+          "url": "https://prostrive.io",
+          "stack": [
+            "SvelteKit 2",
+            "Svelte 5",
+            "TypeScript",
+            "Tailwind v4",
+            "Sanity CMS",
+            "Vercel"
+          ],
+          "highlights": [
+            {
+              "label": "Build",
+              "text": "Built and maintain a 53-page marketing site (25 service pages, blog, portfolio, careers) across 439 components, in a pnpm workspace with the CMS Studio."
+            },
+            {
+              "label": "CMS",
+              "text": "Designed 17 Sanity schema types so marketing edits page copy, SEO metadata, blog posts, and job listings without a developer, including reusable referenced CTA blocks."
+            },
+            {
+              "label": "Performance",
+              "text": "Implemented Cloudflare edge image resizing with generated srcset ladders, route-scoped CMS queries, and a deferred cookie-consent bundle, cutting Total Blocking Time by ~300ms."
+            },
+            {
+              "label": "Technical SEO",
+              "text": "Own JSON-LD structured data, a sitemap generated from live routes and CMS content, breadcrumbs, and 301 redirects, working to an external SEO agency's audits. Also shipped a Turnstile-protected contact flow and a D3/TopoJSON global-presence map."
+            }
+          ]
+        }
+      ],
+      "blurb": "Design and ship full-stack web applications end to end, from database schema and APIs to frontend and deployment. Remote, Netherlands."
+    },
+    {
+      "role": "Full Stack Developer Intern",
+      "company": "Prostrive BV",
+      "location": "Netherlands (Remote)",
+      "start": "2025-12",
+      "end": "2026-02",
+      "highlights": [
+        {
+          "label": "API & Tools",
+          "text": "Integrated Cal.com and other APIs for seamless scheduling and data flow."
+        },
+        {
+          "label": "Full-stack Delivery",
+          "text": "Developed client platforms (VerzendNL, Lumatask) with React.js, Next.js, Tailwind CSS from architecture to deployment."
+        },
+        {
+          "label": "Collaboration",
+          "text": "Worked in Agile teams with designers and QA; implemented CI/CD and version control strategies."
+        }
+      ],
+      "projects": [],
+      "blurb": "Built client web apps with React, Next.js and Tailwind CSS, integrated third-party APIs, and worked in an Agile team with designers and QA."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Student Council Attendance & Fines System",
+      "start": "2024-02",
+      "end": "2025-08",
+      "location": "Eastern Samar, Philippines",
+      "stack": [
+        "React.js",
+        "Tailwind CSS",
+        "React Query",
+        "React Hook Form",
+        "Node.js",
+        "Express.js",
+        "PostgreSQL",
+        "JWT"
+      ],
+      "highlights": [
+        {
+          "label": "System Design",
+          "text": "Built full-stack Student Council Management System for ~6,000 students, handling users, events, attendance, and fines."
+        },
+        {
+          "label": "Frontend",
+          "text": "Developed UI with React.js, Tailwind CSS, React Query, and React Hook Form, using reusable and modular components for scalable interfaces."
+        },
+        {
+          "label": "Database",
+          "text": "Designed PostgreSQL schema with optimized indexing, normalized relationships, and efficient queries across all entities."
+        },
+        {
+          "label": "Security",
+          "text": "Implemented JWT authentication with role-based access control (RBAC) in Node.js/Express.js."
+        },
+        {
+          "label": "Automation & Performance",
+          "text": "Automated fine calculations and server-state synchronization; reduced administrative workload by 80–90%."
+        }
+      ]
+    },
+    {
+      "name": "Smart Home System (Capstone Project)",
+      "start": "2024-09",
+      "end": "2025-02",
+      "location": "Eastern Samar, Philippines",
+      "stack": [
+        "OpenCV",
+        "TensorFlow",
+        "ESP32",
+        "ESP32-CAM",
+        "React.js",
+        "Tailwind CSS",
+        "FastAPI",
+        "WebSockets"
+      ],
+      "highlights": [
+        {
+          "label": "Machine Learning & Computer Vision",
+          "text": "Real-time detection of customizable hand gestures using OpenCV and TensorFlow for touchless smart home control."
+        },
+        {
+          "label": "IoT Hardware",
+          "text": "Controlled appliances, lighting, and security via ESP32/ESP32-CAM and relay modules with low-latency offline performance."
+        },
+        {
+          "label": "Full-Stack Dashboard",
+          "text": "Built responsive web interface with React.js, Tailwind CSS, FastAPI, and WebSockets for live streaming, monitoring, and manual overrides."
+        },
+        {
+          "label": "Impact & Accessibility",
+          "text": "Supported user-defined gestures for accessibility and achieved SUS 92.83 (Grade A) with excellent benchmark ratings."
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science in Information Technology",
+      "school": "Eastern Samar State University – Guiuan Campus",
+      "location": "Eastern Samar, Philippines",
+      "start": "2022",
+      "end": "2026",
+      "gpa": "3.75",
+      "honors": [
+        "Cum Laude"
+      ],
+      "short": {
+        "degree": "BS Information Technology",
+        "school": "ESSU Guiuan",
+        "blurb": "Cum Laude, GPA 3.75. ITSO 2024 Programming and Webpage Design champion."
+      }
+    }
+  ],
+  "skills": [
+    {
+      "category": "Agentic / AI Tools",
+      "items": [
+        "Cursor AI IDE",
+        "Claude Code",
+        "OpenAI",
+        "Anthropic",
+        "LLM APIs",
+        "Prompt engineering fundamentals",
+        "LlamaIndex",
+        "LangChain"
+      ]
+    },
+    {
+      "category": "Backend Development",
+      "items": [
+        "Node.js",
+        "Python",
+        "PHP",
+        "C++",
+        "C#",
+        "Java"
+      ]
+    },
+    {
+      "category": "Frontend Development",
+      "items": [
+        "JavaScript (ES6+)",
+        "TypeScript",
+        "Tailwind CSS",
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "category": "Full-Stack / Frameworks",
+      "items": [
+        "React",
+        "Next.js",
+        "Svelte",
+        "SvelteKit",
+        "Vue.js",
+        "Express.js",
+        "FastAPI",
+        "jQuery",
+        "Laravel"
+      ]
+    },
+    {
+      "category": "Databases & Cloud Services",
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "MariaDB",
+        "MongoDB",
+        "Firebase",
+        "Supabase",
+        "Cloudflare",
+        "Vercel",
+        "AWS"
+      ]
+    },
+    {
+      "category": "Tools & Technologies",
+      "items": [
+        "WordPress",
+        "Toolset",
+        "Linear",
+        "Postman",
+        "Figma",
+        "API integration (REST)",
+        "WebSockets",
+        "Webhooks",
+        "Microservices",
+        "AI-assisted development tools"
+      ]
+    },
+    {
+      "category": "Version Control & CI/CD",
+      "items": [
+        "Git",
+        "GitHub",
+        "GitLab",
+        "GitHub Actions"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Cum Laude"
+    },
+    {
+      "title": "ITSO 2024 Programming Competition Champion"
+    },
+    {
+      "title": "ITSO 2024 Webpage Design Competition Champion"
+    },
+    {
+      "title": "EVCO 2024 Programming Competition Representative"
+    }
+  ],
+  "references": [
+    {
+      "name": "Sven Hurks",
+      "title": "CEO, Prostrive BV"
+    },
+    {
+      "name": "Engr. Roger R. Abulencia",
+      "title": "Dean, College of Computer Studies"
+    }
+  ],
+  "photo": null,
+  "featuredSkills": [
+    "TypeScript",
+    "JavaScript",
+    "Python",
+    "React",
+    "Next.js",
+    "SvelteKit",
+    "Tailwind CSS",
+    "Node.js",
+    "FastAPI",
+    "PostgreSQL",
+    "Supabase",
+    "Vercel",
+    "Cloudflare",
+    "Git",
+    "Sanity",
+    "Claude Code"
+  ],
+  "about": "Software Engineer with hands-on experience designing and delivering end-to-end web applications. Skilled in architecture, scalable system design, and frontend-to-backend integration, with expertise in database modeling, API development, and performance optimization.",
+  "work": [
+    {
+      "slug": "affiliate-giveaway-platform",
+      "name": "Affiliate & Giveaway Platform",
+      "title": "Multi-Tenant Affiliate & Giveaway Platform",
+      "summary": "One codebase and database running eight production sites: four streamer sites and their admin panels.",
+      "role": "Full Stack Developer, Prostrive BV",
+      "year": "2026",
+      "stack": [
+        "Next.js 16",
+        "TypeScript",
+        "Supabase",
+        "Tailwind v4",
+        "Turborepo",
+        "Vercel"
+      ],
+      "cardStack": [
+        "Next.js",
+        "Supabase",
+        "Turborepo"
+      ],
+      "links": {
+        "live": null,
+        "source": null
+      },
+      "stats": [
+        {
+          "value": "8",
+          "label": "production deployments"
+        },
+        {
+          "value": "18",
+          "label": "Postgres tables with RLS"
+        },
+        {
+          "value": "65+",
+          "label": "typed API functions"
+        },
+        {
+          "value": "10",
+          "label": "admin screens"
+        }
+      ],
+      "points": [
+        {
+          "label": "Architecture",
+          "text": "Four streamer sites and four admin panels from one Turborepo codebase and database, sharing a typed API layer."
+        },
+        {
+          "label": "Database & security",
+          "text": "Row-level security enforces admin and editor roles in Postgres, with a full audit log and 2FA staff invites."
+        },
+        {
+          "label": "Admin suite",
+          "text": "Drag-and-drop offer ranking, giveaway and raffle lifecycles, bulk media, menus, and SEO controls."
+        },
+        {
+          "label": "Fraud & analytics",
+          "text": "Duplicate entries flagged by IP and device fingerprint; click-through dashboard with server-rendered SVG sparklines."
+        }
+      ],
+      "images": []
+    },
+    {
+      "slug": "prostrive-io",
+      "name": "prostrive.io",
+      "title": "Prostrive Corporate Marketing Site",
+      "summary": "A 53-page marketing site with a CMS, so the marketing team ships pages, posts and job listings without a developer.",
+      "role": "Full Stack Developer, Prostrive BV",
+      "year": "2026",
+      "stack": [
+        "SvelteKit 2",
+        "Svelte 5",
+        "TypeScript",
+        "Tailwind v4",
+        "Sanity CMS",
+        "Vercel"
+      ],
+      "cardStack": [
+        "SvelteKit",
+        "Sanity",
+        "Cloudflare"
+      ],
+      "links": {
+        "live": "https://prostrive.io",
+        "source": null
+      },
+      "stats": [
+        {
+          "value": "53",
+          "label": "pages"
+        },
+        {
+          "value": "439",
+          "label": "components"
+        },
+        {
+          "value": "17",
+          "label": "Sanity schema types"
+        },
+        {
+          "value": "~300ms",
+          "label": "less Total Blocking Time"
+        }
+      ],
+      "points": [
+        {
+          "label": "Build",
+          "text": "25 service pages, a blog, portfolio and careers, in a pnpm workspace alongside the CMS Studio."
+        },
+        {
+          "label": "CMS",
+          "text": "17 Sanity schema types cover page copy, SEO metadata, blog posts and job listings, with reusable CTA blocks."
+        },
+        {
+          "label": "Performance",
+          "text": "Cloudflare edge image resizing with srcset ladders, route-scoped CMS queries and a deferred cookie-consent bundle."
+        },
+        {
+          "label": "Technical SEO",
+          "text": "JSON-LD, a sitemap built from live routes and CMS content, breadcrumbs and 301 redirects, to an external agency's audits."
+        }
+      ],
+      "images": []
+    },
+    {
+      "slug": "effectzorg-recruitment-site",
+      "name": "Effectzorg recruitment site",
+      "title": "Effectzorg — healthcare recruitment site",
+      "summary": "Careers site for a Dutch healthcare recruitment agency, with radius-based vacancy search and ATS-linked applications.",
+      "role": null,
+      "year": "2026",
+      "stack": [
+        "WordPress 6.7 (FSE)",
+        "PHP",
+        "Advanced Custom Fields Pro",
+        "Tailwind CSS v4",
+        "Vite",
+        "Google Maps Platform"
+      ],
+      "cardStack": [
+        "WordPress",
+        "PHP",
+        "Tailwind CSS"
+      ],
+      "links": {
+        "live": "https://effectzorg.nl",
+        "source": null
+      },
+      "stats": [
+        {
+          "value": "37",
+          "label": "ACF blocks"
+        },
+        {
+          "value": "13",
+          "label": "reusable components"
+        },
+        {
+          "value": "8",
+          "label": "site templates"
+        },
+        {
+          "value": "7",
+          "label": "job taxonomies"
+        }
+      ],
+      "points": [
+        {
+          "label": "Module system",
+          "text": "Each folder in modules/ with block.json, module.php and fields.php self-registers via one auto-loader. Field groups live in code, so deploys need no DB import."
+        },
+        {
+          "label": "Location search",
+          "text": "Vacancy search filters by Haversine distance over a REST endpoint and returns server-rendered cards. Typed locations geocode server-side, cached hourly."
+        },
+        {
+          "label": "Build pipeline",
+          "text": "Tailwind v4 compiles through Vite, and the compiled stylesheet is committed because the production host has no Node, so builds happen before push."
+        },
+        {
+          "label": "Saved jobs",
+          "text": "Visitors save vacancies to localStorage with no account. A JS card builder mirrors the PHP one so saved and live listings render identically."
+        }
+      ],
+      "images": []
+    },
+    {
+      "slug": "verzendnl",
+      "name": "VerzendNL",
+      "title": "VerzendNL",
+      "summary": "Client platform built during my internship at Prostrive, from architecture to deployment.",
+      "role": "Full Stack Developer Intern, Prostrive BV",
+      "year": "2025",
+      "stack": [
+        "React",
+        "Next.js",
+        "Tailwind CSS"
+      ],
+      "cardStack": [
+        "Next.js",
+        "Tailwind CSS"
+      ],
+      "links": {
+        "live": null,
+        "source": null
+      },
+      "stats": [],
+      "points": [
+        {
+          "label": "Full-stack delivery",
+          "text": "Built with React, Next.js and Tailwind CSS from architecture to deployment, in an Agile team with designers and QA."
+        }
+      ],
+      "images": []
+    },
+    {
+      "slug": "lumatask",
+      "name": "Lumatask",
+      "title": "Lumatask",
+      "summary": "Client platform built during my internship at Prostrive, from architecture to deployment.",
+      "role": "Full Stack Developer Intern, Prostrive BV",
+      "year": "2025",
+      "stack": [
+        "React",
+        "Next.js",
+        "Tailwind CSS"
+      ],
+      "cardStack": [
+        "React",
+        "Next.js"
+      ],
+      "links": {
+        "live": null,
+        "source": null
+      },
+      "stats": [],
+      "points": [
+        {
+          "label": "Full-stack delivery",
+          "text": "Built with React, Next.js and Tailwind CSS from architecture to deployment, in an Agile team with designers and QA."
+        }
+      ],
+      "images": []
+    },
+    {
+      "slug": "student-council-system",
+      "name": "Student Council Attendance & Fines",
+      "title": "Student Council Attendance & Fines System",
+      "summary": "Users, events, attendance and fines for a student council serving about 6,000 students.",
+      "role": "Full-stack developer",
+      "year": "2024–2025",
+      "stack": [
+        "React",
+        "Tailwind CSS",
+        "React Query",
+        "React Hook Form",
+        "Node.js",
+        "Express",
+        "PostgreSQL"
+      ],
+      "cardStack": [
+        "React",
+        "Express",
+        "PostgreSQL"
+      ],
+      "links": {
+        "live": null,
+        "source": null
+      },
+      "stats": [
+        {
+          "value": "~6,000",
+          "label": "students"
+        },
+        {
+          "value": "80–90%",
+          "label": "less admin work"
+        }
+      ],
+      "points": [
+        {
+          "label": "Database",
+          "text": "Normalized PostgreSQL schema with indexes tuned for attendance and fines queries."
+        },
+        {
+          "label": "Security",
+          "text": "JWT authentication with role-based access control in Node.js and Express."
+        },
+        {
+          "label": "Automation",
+          "text": "Fines are calculated automatically, with server state kept in sync through React Query."
+        },
+        {
+          "label": "Frontend",
+          "text": "Reusable, modular React components with React Hook Form for data entry."
+        }
+      ],
+      "images": []
+    },
+    {
+      "slug": "gesture-smart-home",
+      "name": "Gesture-Controlled Smart Home",
+      "title": "Gesture-Controlled Smart Home",
+      "summary": "Capstone project: touchless smart home control with custom hand gestures, running offline on ESP32 hardware.",
+      "role": "Capstone project",
+      "year": "2024–2025",
+      "stack": [
+        "OpenCV",
+        "TensorFlow",
+        "ESP32",
+        "React",
+        "Tailwind CSS",
+        "FastAPI",
+        "WebSockets"
+      ],
+      "cardStack": [
+        "TensorFlow",
+        "ESP32",
+        "FastAPI"
+      ],
+      "links": {
+        "live": null,
+        "source": null
+      },
+      "stats": [
+        {
+          "value": "92.83",
+          "label": "SUS usability score (Grade A)"
+        }
+      ],
+      "points": [
+        {
+          "label": "Computer vision",
+          "text": "Real-time detection of user-defined hand gestures with OpenCV and TensorFlow."
+        },
+        {
+          "label": "IoT hardware",
+          "text": "Appliances, lighting and security controlled through ESP32, ESP32-CAM and relay modules, with low latency offline."
+        },
+        {
+          "label": "Dashboard",
+          "text": "React and FastAPI dashboard with WebSockets for live video, monitoring and manual overrides."
+        },
+        {
+          "label": "Accessibility",
+          "text": "Custom gestures let each user pick motions that suit them."
+        }
+      ],
+      "images": []
+    }
+  ]
+}
