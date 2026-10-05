@@ -32,6 +32,24 @@ export function Chip({ children, icon }: { children: ReactNode; icon?: ReactNode
   );
 }
 
+// Small year / company tags on project cards and rows.
+export function MetaBadges({ year, org }: { year: string | null; org: string }) {
+  return (
+    <div className="flex flex-wrap gap-1">
+      {year && <Badge>{year}</Badge>}
+      <Badge>{org}</Badge>
+    </div>
+  );
+}
+
+function Badge({ children }: { children: ReactNode }) {
+  return (
+    <span className="rounded-[5px] border border-line-chip bg-surface-2 px-1.5 py-0.5 font-mono text-[10px] leading-none text-fg-3 sm:text-[11px]">
+      {children}
+    </span>
+  );
+}
+
 export function ButtonLink({ className, ...props }: ComponentProps<"a">) {
   return (
     <a

@@ -11,11 +11,17 @@ export type Work = {
   year: string | null;
   stack: string[];
   cardStack: string[];
-  links: { live: string | null; admin?: string | null; source: string | null };
+  links: {
+    live: string | null;
+    admin?: string | null;
+    source: string | null;
+    document?: { label: string; href: string } | null;
+  };
   stats: { value: string; label: string }[];
   points: { label: string; text: string }[];
   images: WorkImage[];
   featured?: boolean;
+  org: string;
 };
 
 export type TimelineItem = {

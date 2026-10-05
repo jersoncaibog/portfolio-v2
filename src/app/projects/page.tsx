@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeftIcon, ArrowRightIcon, ImagesIcon } from "@/components/icons";
-import { Card, ImagePlaceholder, SectionLabel } from "@/components/ui";
+import { Card, ImagePlaceholder, MetaBadges, SectionLabel } from "@/components/ui";
 import { profile, work } from "@/lib/profile";
 
 export const metadata: Metadata = {
@@ -33,7 +33,7 @@ export default function Projects() {
               <li key={item.slug} className="border-t border-line-soft first:border-t-0">
                 <Link
                   href={`/work/${item.slug}?from=projects`}
-                  className="group grid grid-cols-[96px_minmax(0,1fr)] items-center gap-4 rounded-lg px-1 py-3.5 transition-colors hover:bg-surface-2 sm:grid-cols-[160px_minmax(0,1fr)_auto] sm:gap-6 sm:px-2"
+                  className="group grid grid-cols-[96px_minmax(0,1fr)] items-center gap-4 rounded-lg px-1 py-3.5 transition-colors hover:bg-surface-2 sm:grid-cols-[200px_minmax(0,1fr)_auto] sm:gap-6 sm:px-2"
                 >
                   <div className="relative aspect-16/10 overflow-hidden rounded-[5px]">
                     {cover ? (
@@ -41,7 +41,7 @@ export default function Projects() {
                         src={cover.src}
                         alt={cover.alt}
                         fill
-                        sizes="160px"
+                        sizes="(min-width: 640px) 200px, 96px"
                         className="border border-line object-cover"
                       />
                     ) : (
@@ -55,17 +55,16 @@ export default function Projects() {
                     )}
                   </div>
 
-                  <div className="flex min-w-0 flex-col gap-1">
-                    <div className="flex items-baseline justify-between gap-3">
-                      <h2 className="text-sm font-semibold group-hover:text-white sm:text-[15px]">{item.name}</h2>
-                      {item.year && <span className="shrink-0 font-mono text-[11px] text-faint sm:hidden">{item.year}</span>}
-                    </div>
+                  <div className="flex min-w-0 flex-col gap-1.5 sm:gap-2">
+                    <h2 className="text-sm font-semibold group-hover:text-white sm:text-[15px]">{item.name}</h2>
                     <p className="hidden text-sm leading-relaxed text-muted sm:block">{item.summary}</p>
                     <p className="font-mono text-[11px] text-subtle sm:text-xs">{item.cardStack.join(" · ")}</p>
+                    <div className="pt-1">
+                      <MetaBadges year={item.year} org={item.org} />
+                    </div>
                   </div>
 
-                  <div className="hidden items-center gap-4 sm:flex">
-                    {item.year && <span className="font-mono text-xs text-faint">{item.year}</span>}
+                  <div className="hidden items-center sm:flex">
                     <ArrowRightIcon size={18} className="text-accent transition-transform group-hover:translate-x-0.5" />
                   </div>
                 </Link>

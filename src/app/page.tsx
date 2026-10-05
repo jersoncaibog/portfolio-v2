@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon, FileDownIcon, GitHubIcon, ImagesIcon, LinkedInIcon, MailIcon, PhoneIcon } from "@/components/icons";
 import { TechIcon } from "@/components/tech-icon";
-import { ButtonLink, Card, Chip, ImagePlaceholder, SectionLabel } from "@/components/ui";
+import { ButtonLink, Card, Chip, ImagePlaceholder, MetaBadges, SectionLabel } from "@/components/ui";
 import { featuredWork, formatDuration, formatRange, profile, timeline } from "@/lib/profile";
 
 // Re-render daily so "Now" durations stay current.
@@ -147,11 +147,11 @@ export default function Home() {
                     )}
                   </div>
                   <div className="flex flex-col gap-1 px-1">
-                    <div className="flex items-baseline justify-between gap-2">
-                      <h3 className="text-[13px] leading-snug font-semibold group-hover:text-white sm:text-sm">{item.name}</h3>
-                      {item.year && <span className="hidden shrink-0 font-mono text-xs text-faint sm:block">{item.year}</span>}
-                    </div>
+                    <h3 className="text-[13px] leading-snug font-semibold group-hover:text-white sm:text-sm">{item.name}</h3>
                     <p className="font-mono text-[10px] text-subtle sm:text-xs">{item.cardStack.join(" · ")}</p>
+                    <div className="pt-1">
+                      <MetaBadges year={item.year} org={item.org} />
+                    </div>
                   </div>
                 </Link>
               </li>

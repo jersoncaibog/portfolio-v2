@@ -12,7 +12,7 @@ export function Gallery({ images, className }: { images: WorkImage[]; className?
   if (images.length === 0) {
     return (
       <div className={cx("rounded-[10px] border border-line bg-surface p-2.5", className)}>
-        <ImagePlaceholder label="screenshot" className="aspect-16/10 rounded-md" />
+        <ImagePlaceholder className="aspect-16/10 rounded-md" />
       </div>
     );
   }

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Gallery } from "@/components/gallery";
 import { BackLink, NextProjectLink } from "@/components/case-nav";
-import { ArrowRightIcon, ArrowUpRightIcon } from "@/components/icons";
+import { ArrowRightIcon, ArrowUpRightIcon, FileTextIcon } from "@/components/icons";
 import { ButtonLink, Card, Chip, SectionLabel } from "@/components/ui";
 import { getNextWork, getWork, profile, work } from "@/lib/profile";
 
@@ -34,7 +34,7 @@ export default async function CaseStudy(props: PageProps<"/work/[slug]">) {
           <h1 className="text-[22px] leading-tight font-semibold tracking-[-0.03em]">{item.title}</h1>
           <p className="max-w-170 text-sm leading-normal text-muted md:text-[15px]">{item.summary}</p>
         </div>
-        {(item.links.live || item.links.admin || item.links.source) && (
+        {(item.links.live || item.links.admin || item.links.source || item.links.document) && (
           <div className="flex shrink-0 flex-wrap gap-2">
             {item.links.live && (
               <a
@@ -44,6 +44,16 @@ export default async function CaseStudy(props: PageProps<"/work/[slug]">) {
                 className="inline-flex items-center gap-1.5 rounded-lg bg-accent px-3 py-1.5 text-sm font-semibold text-bg hover:bg-[#b9a3fb]"
               >
                 Live site <ArrowUpRightIcon size={15} strokeWidth={2.2} />
+              </a>
+            )}
+            {item.links.document && (
+              <a
+                href={item.links.document.href}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-lg bg-accent px-3 py-1.5 text-sm font-semibold text-bg hover:bg-[#b9a3fb]"
+              >
+                <FileTextIcon size={15} strokeWidth={2.2} /> {item.links.document.label}
               </a>
             )}
             {item.links.admin && (

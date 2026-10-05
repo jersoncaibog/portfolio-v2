@@ -408,7 +408,9 @@
           "alt": "Admin overview with offer clicks, code copies and giveaway stats",
           "caption": "Admin panel overview"
         }
-      ]
+      ],
+      "featured": true,
+      "org": "Prostrive BV"
     },
     {
       "slug": "prostrive-io",
@@ -475,1093 +477,9 @@
           "src": "/work/prostrive-io/1.webp",
           "alt": "prostrive.io homepage"
         }
-      ]
-    },
-    {
-      "slug": "effectzorg-recruitment-site",
-      "name": "Effectzorg recruitment site",
-      "title": "Effectzorg — healthcare recruitment site",
-      "summary": "Careers site for a Dutch healthcare recruitment agency, with radius-based vacancy search and ATS-linked applications.",
-      "role": null,
-      "year": "2026",
-      "stack": [
-        "WordPress 6.7 (FSE)",
-        "PHP",
-        "Advanced Custom Fields Pro",
-        "Tailwind CSS v4",
-        "Vite",
-        "Google Maps Platform"
       ],
-      "cardStack": [
-        "WordPress",
-        "PHP",
-        "Tailwind CSS"
-      ],
-      "links": {
-        "live": "https://effectzorg.nl",
-        "source": null
-      },
-      "stats": [
-        {
-          "value": "37",
-          "label": "ACF blocks"
-        },
-        {
-          "value": "13",
-          "label": "reusable components"
-        },
-        {
-          "value": "8",
-          "label": "site templates"
-        },
-        {
-          "value": "7",
-          "label": "job taxonomies"
-        }
-      ],
-      "points": [
-        {
-          "label": "Module system",
-          "text": "Each folder in modules/ with block.json, module.php and fields.php self-registers via one auto-loader. Field groups live in code, so deploys need no DB import."
-        },
-        {
-          "label": "Location search",
-          "text": "Vacancy search filters by Haversine distance over a REST endpoint and returns server-rendered cards. Typed locations geocode server-side, cached hourly."
-        },
-        {
-          "label": "Build pipeline",
-          "text": "Tailwind v4 compiles through Vite, and the compiled stylesheet is committed because the production host has no Node, so builds happen before push."
-        },
-        {
-          "label": "Saved jobs",
-          "text": "Visitors save vacancies to localStorage with no account. A JS card builder mirrors the PHP one so saved and live listings render identically."
-        }
-      ],
-      "images": [
-        {
-          "src": "/work/effectzorg-recruitment-site/1.webp",
-          "alt": "Effectzorg recruitment site homepage"
-        }
-      ]
-    },
-    {
-      "slug": "werken-bij-centiv",
-      "name": "Werken bij Centiv",
-      "title": "Werken bij Centiv careers site",
-      "summary": "Careers site for a mental health care provider where candidates search vacancies, save favourites and apply online.",
-      "role": null,
-      "year": "2026",
-      "stack": [
-        "WordPress",
-        "PHP",
-        "Toolset",
-        "MySQL",
-        "Contact Form 7",
-        "GSAP",
-        "Nginx"
-      ],
-      "cardStack": [
-        "WordPress",
-        "PHP",
-        "Toolset"
-      ],
-      "links": {
-        "live": "https://werkenbijcentiv.nl",
-        "source": null
-      },
-      "stats": [
-        {
-          "value": "52",
-          "label": "page modules"
-        },
-        {
-          "value": "32",
-          "label": "query views"
-        },
-        {
-          "value": "6",
-          "label": "custom post types"
-        },
-        {
-          "value": "6",
-          "label": "custom taxonomies"
-        }
-      ],
-      "points": [
-        {
-          "label": "Architecture",
-          "text": "Editors build pages from 52 reusable Toolset modules (heroes, vacancy overviews, testimonials, USP blocks), so new pages need no code."
-        },
-        {
-          "label": "Search",
-          "text": "Vacancy search rewrites the Toolset query so one search box matches job titles, locations and employment types."
-        },
-        {
-          "label": "Job feeds",
-          "text": "A key-protected REST endpoint refreshes a quarter of the vacancies per call, and a daily export is written to a fixed XML feed for job boards."
-        },
-        {
-          "label": "Performance",
-          "text": "The home page drops about 85 KB of unused plugin CSS and JS by removing them from Toolset's dependency chains at the right hook."
-        }
-      ],
-      "images": [
-        {
-          "src": "/work/werken-bij-centiv/1.webp",
-          "alt": "Werken bij Centiv homepage"
-        }
-      ]
-    },
-    {
-      "slug": "spacem-online",
-      "name": "Space'M Online website",
-      "title": "Space'M Online agency website rebuild",
-      "summary": "Marketing site for an SEO agency with services, case studies, listicles, events and downloadable resources.",
-      "role": null,
-      "year": "2026",
-      "stack": [
-        "WordPress",
-        "PHP",
-        "ACF Pro",
-        "Tailwind CSS 4",
-        "Vite",
-        "Figma"
-      ],
-      "cardStack": [
-        "WordPress",
-        "ACF Pro",
-        "Tailwind CSS 4"
-      ],
-      "links": {
-        "live": null,
-        "source": null
-      },
-      "stats": [
-        {
-          "value": "88",
-          "label": "content blocks"
-        },
-        {
-          "value": "26",
-          "label": "render components"
-        },
-        {
-          "value": "5",
-          "label": "content types"
-        },
-        {
-          "value": "246",
-          "label": "commits"
-        }
-      ],
-      "points": [
-        {
-          "label": "Architecture",
-          "text": "Block theme where each of the 88 blocks is a folder with its own fields, template and styles, auto-loaded at boot. No block is registered by hand."
-        },
-        {
-          "label": "Migration",
-          "text": "Rebuilt from a job-board theme one module at a time, with the old code kept in legacy folders so the site stayed usable during the switch."
-        },
-        {
-          "label": "Content",
-          "text": "Long-form article pages with a sticky table of contents, scroll-spy highlighting, footnote anchors and a per-article sidebar CTA."
-        },
-        {
-          "label": "Design",
-          "text": "Built from Figma with the design cached in the repo, so every module can be checked against the source without new design API calls."
-        }
-      ],
-      "images": [
-        {
-          "src": "/work/spacem-online/1.webp",
-          "alt": "Space'M Online website homepage"
-        }
-      ]
-    },
-    {
-      "slug": "ras-recruitment",
-      "name": "RAS Recruitment",
-      "title": "RAS Recruitment website",
-      "summary": "Recruitment agency site where candidates browse jobs by sector and apply, and employers learn about the agency's services.",
-      "role": null,
-      "year": "2026",
-      "stack": [
-        "WordPress",
-        "PHP",
-        "ACF Pro",
-        "Gravity Forms",
-        "Tailwind CSS 4",
-        "Vite"
-      ],
-      "cardStack": [
-        "WordPress",
-        "ACF Pro",
-        "Tailwind CSS 4"
-      ],
-      "links": {
-        "live": "https://ras-recruitment.paddap.dev",
-        "source": null
-      },
-      "stats": [
-        {
-          "value": "44",
-          "label": "content blocks"
-        },
-        {
-          "value": "42",
-          "label": "field groups"
-        },
-        {
-          "value": "15",
-          "label": "render components"
-        },
-        {
-          "value": "3",
-          "label": "ATS connectors"
-        }
-      ],
-      "points": [
-        {
-          "label": "Integration",
-          "text": "ATS plugin with a connector registry covering 3 applicant tracking systems, syncing jobs every hour through WP-Cron."
-        },
-        {
-          "label": "Search",
-          "text": "Job filters run through a custom REST endpoint with sanitised parameters, so the results update without a page reload."
-        },
-        {
-          "label": "Architecture",
-          "text": "Full Site Editing theme with ACF blocks whose fields are defined in code, plus Tailwind 4 compiled by Vite into one committed stylesheet."
-        }
-      ],
-      "images": [
-        {
-          "src": "/work/ras-recruitment/1.webp",
-          "alt": "RAS Recruitment homepage"
-        }
-      ]
-    },
-    {
-      "slug": "status-pro",
-      "name": "Status Pro",
-      "title": "Status Pro recruitment website",
-      "summary": "Recruitment site with 800+ vacancies grouped by professional domain, where candidates search, save and apply for jobs.",
-      "role": null,
-      "year": "2026",
-      "stack": [
-        "WordPress",
-        "PHP",
-        "ACF Pro",
-        "Gravity Forms",
-        "Tailwind CSS 4",
-        "Vite"
-      ],
-      "cardStack": [
-        "WordPress",
-        "ACF Pro",
-        "Tailwind CSS 4"
-      ],
-      "links": {
-        "live": "https://status-pro.paddap.dev",
-        "source": null
-      },
-      "stats": [
-        {
-          "value": "802",
-          "label": "vacancies"
-        },
-        {
-          "value": "41",
-          "label": "content blocks"
-        },
-        {
-          "value": "42",
-          "label": "field groups"
-        },
-        {
-          "value": "10",
-          "label": "domain landing pages"
-        }
-      ],
-      "points": [
-        {
-          "label": "Integrations",
-          "text": "Applications go to Bullhorn through a Gravity Forms integration. The RecruitNow form switches on per job once the job has a RecruitNow ID."
-        },
-        {
-          "label": "Content model",
-          "text": "Each professional domain is a taxonomy term with its own landing page, kept in sync when terms are added or removed."
-        },
-        {
-          "label": "Job detail",
-          "text": "Job pages show a travel-time block using Google Directions, so candidates see the commute before they apply."
-        },
-        {
-          "label": "Architecture",
-          "text": "Full Site Editing theme with 41 ACF blocks whose fields are defined in code, styled with Tailwind 4 compiled by Vite."
-        }
-      ],
-      "images": [
-        {
-          "src": "/work/status-pro/1.webp",
-          "alt": "Status Pro homepage"
-        }
-      ]
-    },
-    {
-      "slug": "haystack-people",
-      "name": "Haystack People",
-      "title": "Haystack People recruitment website",
-      "summary": "Bilingual recruitment site for tech and SaaS roles, with separate journeys for candidates and employers.",
-      "role": null,
-      "year": "2026",
-      "stack": [
-        "WordPress",
-        "PHP",
-        "Toolset",
-        "WPML",
-        "MySQL",
-        "Contact Form 7"
-      ],
-      "cardStack": [
-        "WordPress",
-        "Toolset",
-        "WPML"
-      ],
-      "links": {
-        "live": "https://haystackpeople.nl",
-        "source": null
-      },
-      "stats": [
-        {
-          "value": "3,348",
-          "label": "vacancies"
-        },
-        {
-          "value": "2",
-          "label": "languages"
-        },
-        {
-          "value": "44",
-          "label": "content templates"
-        },
-        {
-          "value": "21",
-          "label": "page modules"
-        }
-      ],
-      "points": [
-        {
-          "label": "Integration",
-          "text": "Vacancies come in from the OTYS recruitment system through a custom WordPress plugin."
-        },
-        {
-          "label": "Localisation",
-          "text": "Dutch and English versions run on WPML, with separate SEO landing pages per role group for candidates and employers."
-        },
-        {
-          "label": "Architecture",
-          "text": "Pages are assembled from reusable Toolset modules, so editors can build new landing pages without code."
-        }
-      ],
-      "images": [
-        {
-          "src": "/work/haystack-people/1.webp",
-          "alt": "Haystack People homepage"
-        }
-      ]
-    },
-    {
-      "slug": "treffers-groep",
-      "name": "Treffers Groep",
-      "title": "Treffers Groep recruitment website",
-      "summary": "Recruitment site for candidates and employers, with vacancies, a salary calculator and online applications.",
-      "role": null,
-      "year": "2026",
-      "stack": [
-        "WordPress",
-        "PHP",
-        "Toolset",
-        "MySQL",
-        "Contact Form 7"
-      ],
-      "cardStack": [
-        "WordPress",
-        "Toolset",
-        "PHP"
-      ],
-      "links": {
-        "live": "https://treffers-groep.paddap.dev",
-        "source": null
-      },
-      "stats": [
-        {
-          "value": "58",
-          "label": "page modules"
-        },
-        {
-          "value": "140",
-          "label": "content templates"
-        },
-        {
-          "value": "44",
-          "label": "query views"
-        },
-        {
-          "value": "11",
-          "label": "custom post types"
-        }
-      ],
-      "points": [
-        {
-          "label": "Integration",
-          "text": "Custom plugins connect the site to Talentwave and the PADDAP ATS, with scheduled syncs."
-        },
-        {
-          "label": "Tools",
-          "text": "Salary calculator built from its own post types for experience and hours, editable without code."
-        },
-        {
-          "label": "Applications",
-          "text": "A CV generator plugin turns form submissions into CVs, and a REST endpoint keeps vacancy dates fresh for job boards."
-        }
-      ],
-      "images": [
-        {
-          "src": "/work/treffers-groep/1.webp",
-          "alt": "Treffers Groep homepage"
-        }
-      ]
-    },
-    {
-      "slug": "werken-bij-curamare",
-      "name": "Werken bij Curamare",
-      "title": "Werken bij Curamare careers site",
-      "summary": "Careers site for a regional care organisation, with vacancies by workplace, employee stories and online applications.",
-      "role": null,
-      "year": "2026",
-      "stack": [
-        "WordPress",
-        "PHP",
-        "Toolset",
-        "MySQL",
-        "Contact Form 7"
-      ],
-      "cardStack": [
-        "WordPress",
-        "Toolset",
-        "PHP"
-      ],
-      "links": {
-        "live": "https://werkenbijcuramare.nl",
-        "source": null
-      },
-      "stats": [
-        {
-          "value": "73",
-          "label": "vacancies"
-        },
-        {
-          "value": "58",
-          "label": "employee stories"
-        },
-        {
-          "value": "40",
-          "label": "content templates"
-        },
-        {
-          "value": "5",
-          "label": "taxonomies"
-        }
-      ],
-      "points": [
-        {
-          "label": "Integration",
-          "text": "Vacancies come from AFAS through a custom plugin with a scheduled sync."
-        },
-        {
-          "label": "Applications",
-          "text": "Candidates can build a CV on the site, generated from their form entry by a custom plugin."
-        },
-        {
-          "label": "Filtering",
-          "text": "Vacancies are filtered by workplace, location, education level, contract type and weekly hours."
-        }
-      ],
-      "images": [
-        {
-          "src": "/work/werken-bij-curamare/1.webp",
-          "alt": "Werken bij Curamare homepage"
-        }
-      ]
-    },
-    {
-      "slug": "work-in-society",
-      "name": "Work in Society",
-      "title": "Work in Society recruitment website",
-      "summary": "Recruitment site for technical and IT roles, with vacancies, an open application and job alerts.",
-      "role": null,
-      "year": "2026",
-      "stack": [
-        "WordPress",
-        "PHP",
-        "Toolset",
-        "MySQL",
-        "Contact Form 7"
-      ],
-      "cardStack": [
-        "WordPress",
-        "Toolset",
-        "PHP"
-      ],
-      "links": {
-        "live": "https://workinsociety.com",
-        "source": null
-      },
-      "stats": [
-        {
-          "value": "48",
-          "label": "content templates"
-        },
-        {
-          "value": "20",
-          "label": "page modules"
-        },
-        {
-          "value": "9",
-          "label": "query views"
-        },
-        {
-          "value": "24",
-          "label": "vacancies"
-        }
-      ],
-      "points": [
-        {
-          "label": "Architecture",
-          "text": "Pages are assembled from 20 reusable Toolset modules, so editors build pages without code."
-        },
-        {
-          "label": "Engagement",
-          "text": "Job alerts, saved favourite vacancies, an Instagram feed and Google reviews, the feeds refreshed by scheduled jobs."
-        }
-      ],
-      "images": [
-        {
-          "src": "/work/work-in-society/1.webp",
-          "alt": "Work in Society homepage"
-        }
-      ]
-    },
-    {
-      "slug": "elstar-dynamics",
-      "name": "eLstar Dynamics",
-      "title": "eLstar Dynamics corporate and careers website",
-      "summary": "Corporate and careers site for a smart-glass manufacturer, covering its technology, target markets and vacancies.",
-      "role": null,
-      "year": "2026",
-      "stack": [
-        "WordPress",
-        "PHP",
-        "Toolset",
-        "MySQL",
-        "WP Rocket",
-        "Redis",
-        "DigitalOcean (Ploi)"
-      ],
-      "cardStack": [
-        "WordPress",
-        "Toolset",
-        "PHP"
-      ],
-      "links": {
-        "live": "https://elstar-dynamics.com",
-        "source": null
-      },
-      "stats": [
-        {
-          "value": "20",
-          "label": "pages"
-        },
-        {
-          "value": "199",
-          "label": "page sections"
-        },
-        {
-          "value": "162",
-          "label": "content templates"
-        },
-        {
-          "value": "11",
-          "label": "custom post types"
-        }
-      ],
-      "points": [
-        {
-          "label": "Architecture",
-          "text": "Pages are built from reusable Toolset sections stored as posts, so editors compose layouts without touching theme code."
-        },
-        {
-          "label": "Careers",
-          "text": "Vacancy listings with favourites, job alerts, open applications and a salary calculator built on 3 custom post types."
-        },
-        {
-          "label": "Performance",
-          "text": "Pages are served through WP Rocket, a Redis object cache and an nginx page cache, with minified asset bundles."
-        }
-      ],
-      "images": [
-        {
-          "src": "/work/elstar-dynamics/1.webp",
-          "alt": "eLstar Dynamics homepage"
-        }
-      ]
-    },
-    {
-      "slug": "goodrecruit",
-      "name": "GoodRecruit",
-      "title": "GoodRecruit recruitment agency website",
-      "summary": "Website for a recruitment agency in Finance, HR and Sales, with job listings, applications and job alerts.",
-      "role": null,
-      "year": "2026",
-      "stack": [
-        "WordPress (block theme)",
-        "PHP",
-        "ACF Pro",
-        "Tailwind CSS 4",
-        "Vite 6",
-        "Gravity Forms",
-        "MySQL"
-      ],
-      "cardStack": [
-        "WordPress",
-        "Tailwind CSS",
-        "ACF Pro"
-      ],
-      "links": {
-        "live": "https://goodrecruit.paddap.dev",
-        "source": null
-      },
-      "stats": [
-        {
-          "value": "22",
-          "label": "block modules"
-        },
-        {
-          "value": "7",
-          "label": "page templates"
-        },
-        {
-          "value": "16",
-          "label": "shared components"
-        },
-        {
-          "value": "28",
-          "label": "commits"
-        }
-      ],
-      "points": [
-        {
-          "label": "Architecture",
-          "text": "Each section is a self-contained block module that is loaded automatically, so new sections need no wiring."
-        },
-        {
-          "label": "Content model",
-          "text": "Custom post types, options and seed content are defined in code, so a fresh install comes up with the full structure."
-        },
-        {
-          "label": "Job flow",
-          "text": "Job overviews, a single-job template, applications, open applications and job alerts make up the candidate journey."
-        }
-      ],
-      "images": [
-        {
-          "src": "/work/goodrecruit/1.webp",
-          "alt": "GoodRecruit homepage"
-        }
-      ]
-    },
-    {
-      "slug": "directvacature",
-      "name": "DirectVacature",
-      "title": "DirectVacature job board",
-      "summary": "Job board that connects job seekers with employers, with vacancy search, favourites and employer profiles.",
-      "role": null,
-      "year": "2026",
-      "stack": [
-        "WordPress (block theme)",
-        "PHP",
-        "ACF Pro",
-        "Tailwind CSS 4",
-        "Vite 6",
-        "Gravity Forms",
-        "MySQL"
-      ],
-      "cardStack": [
-        "WordPress",
-        "Tailwind CSS",
-        "ACF Pro"
-      ],
-      "links": {
-        "live": "https://directvacature.paddap.dev",
-        "source": null
-      },
-      "stats": [
-        {
-          "value": "24",
-          "label": "block modules"
-        },
-        {
-          "value": "9",
-          "label": "page templates"
-        },
-        {
-          "value": "19",
-          "label": "shared components"
-        }
-      ],
-      "points": [
-        {
-          "label": "Two-sided",
-          "text": "Separate flows for job seekers and employers, including employer sign-up and an employer profile template."
-        },
-        {
-          "label": "Job seeker tools",
-          "text": "Saved favourite jobs, similar-job suggestions, job alerts and open applications."
-        },
-        {
-          "label": "Architecture",
-          "text": "24 self-contained block modules with dedicated templates for jobs, employers and content pages."
-        }
-      ],
-      "images": [
-        {
-          "src": "/work/directvacature/1.webp",
-          "alt": "DirectVacature homepage"
-        }
-      ]
-    },
-    {
-      "slug": "jit-staffing",
-      "name": "JIT Staffing",
-      "title": "JIT Staffing staffing agency website",
-      "summary": "Website for a staffing agency, where candidates browse jobs, save favourites and apply.",
-      "role": null,
-      "year": "2026",
-      "stack": [
-        "WordPress (block theme)",
-        "PHP",
-        "ACF Pro",
-        "Tailwind CSS 4",
-        "Vite 6",
-        "Gravity Forms",
-        "MySQL"
-      ],
-      "cardStack": [
-        "WordPress",
-        "Tailwind CSS",
-        "ACF Pro"
-      ],
-      "links": {
-        "live": "https://jitstaffing.paddap.dev",
-        "source": null
-      },
-      "stats": [
-        {
-          "value": "35",
-          "label": "block modules"
-        },
-        {
-          "value": "8",
-          "label": "page templates"
-        },
-        {
-          "value": "14",
-          "label": "shared components"
-        }
-      ],
-      "points": [
-        {
-          "label": "Architecture",
-          "text": "35 block modules, the largest set in this theme family, covering carousels, sliders, expanding rows and tabbed job blocks."
-        },
-        {
-          "label": "Job flow",
-          "text": "Job listings, job details, related jobs, favourites, a callback form and a step-by-step application process."
-        },
-        {
-          "label": "Integrations",
-          "text": "Google Reviews and Gravity Forms are built into the page modules."
-        }
-      ],
-      "images": [
-        {
-          "src": "/work/jit-staffing/1.webp",
-          "alt": "JIT Staffing homepage"
-        }
-      ]
-    },
-    {
-      "slug": "clubgeist",
-      "name": "Clubgeist",
-      "title": "Clubgeist creative agency website",
-      "summary": "Bilingual website for a creative advertising agency in Rotterdam, showing its services, cases and news.",
-      "role": null,
-      "year": "2026",
-      "stack": [
-        "WordPress",
-        "PHP",
-        "Toolset",
-        "WPML",
-        "MySQL",
-        "DigitalOcean (Ploi)"
-      ],
-      "cardStack": [
-        "WordPress",
-        "Toolset",
-        "WPML"
-      ],
-      "links": {
-        "live": "https://clubgeist.nl",
-        "source": null
-      },
-      "stats": [
-        {
-          "value": "17",
-          "label": "pages"
-        },
-        {
-          "value": "44",
-          "label": "case studies"
-        },
-        {
-          "value": "288",
-          "label": "case modules"
-        },
-        {
-          "value": "2",
-          "label": "languages"
-        }
-      ],
-      "points": [
-        {
-          "label": "Case studies",
-          "text": "Each case is built from reusable modules, giving 288 sections across 44 cases without one-off templates."
-        },
-        {
-          "label": "Multilingual",
-          "text": "Dutch and English content managed through WPML, including translated strings and forms."
-        },
-        {
-          "label": "Content model",
-          "text": "5 custom post types for modules, cases, case modules, news and vacancies."
-        }
-      ],
-      "images": [
-        {
-          "src": "/work/clubgeist/1.webp",
-          "alt": "Clubgeist homepage"
-        }
-      ]
-    },
-    {
-      "slug": "aurea-imaging",
-      "name": "Aurea Imaging",
-      "title": "Aurea Imaging TreeScout product website",
-      "summary": "Bilingual product site for an agtech company, presenting its TreeScout platform to growers.",
-      "role": null,
-      "year": "2026",
-      "stack": [
-        "WordPress",
-        "PHP",
-        "Toolset",
-        "WPML",
-        "MySQL",
-        "DigitalOcean (Ploi)"
-      ],
-      "cardStack": [
-        "WordPress",
-        "Toolset",
-        "WPML"
-      ],
-      "links": {
-        "live": "https://aureaimaging.com",
-        "source": null
-      },
-      "stats": [
-        {
-          "value": "10",
-          "label": "pages"
-        },
-        {
-          "value": "63",
-          "label": "blog modules"
-        },
-        {
-          "value": "6",
-          "label": "custom post types"
-        },
-        {
-          "value": "2",
-          "label": "languages"
-        }
-      ],
-      "points": [
-        {
-          "label": "Blog system",
-          "text": "Blog posts are assembled from 63 reusable modules, so articles mix text, media and layouts without custom code."
-        },
-        {
-          "label": "Multilingual",
-          "text": "English and Dutch content managed through WPML, including multilingual contact forms."
-        }
-      ],
-      "images": [
-        {
-          "src": "/work/aurea-imaging/1.webp",
-          "alt": "Aurea Imaging homepage"
-        }
-      ]
-    },
-    {
-      "slug": "verzendnl",
-      "name": "VerzendNL",
-      "title": "VerzendNL",
-      "summary": "Client platform built during my internship at Prostrive, from architecture to deployment.",
-      "role": "Full Stack Developer Intern, Prostrive BV",
-      "year": "2025",
-      "stack": [
-        "React",
-        "Next.js",
-        "Tailwind CSS"
-      ],
-      "cardStack": [
-        "Next.js",
-        "Tailwind CSS"
-      ],
-      "links": {
-        "live": "https://verzend-nl.vercel.app",
-        "source": null
-      },
-      "stats": [],
-      "points": [
-        {
-          "label": "Full-stack delivery",
-          "text": "Built with React, Next.js and Tailwind CSS from architecture to deployment, in an Agile team with designers and QA."
-        }
-      ],
-      "images": [
-        {
-          "src": "/work/verzendnl/1.webp",
-          "alt": "VerzendNL homepage"
-        }
-      ]
-    },
-    {
-      "slug": "lumatask",
-      "name": "Lumatask",
-      "title": "Lumatask",
-      "summary": "Client platform built during my internship at Prostrive, from architecture to deployment.",
-      "role": "Full Stack Developer Intern, Prostrive BV",
-      "year": "2025",
-      "stack": [
-        "React",
-        "Next.js",
-        "Tailwind CSS"
-      ],
-      "cardStack": [
-        "React",
-        "Next.js"
-      ],
-      "links": {
-        "live": "https://lumatask.vercel.app",
-        "source": null
-      },
-      "stats": [],
-      "points": [
-        {
-          "label": "Full-stack delivery",
-          "text": "Built with React, Next.js and Tailwind CSS from architecture to deployment, in an Agile team with designers and QA."
-        }
-      ],
-      "images": [
-        {
-          "src": "/work/lumatask/1.webp",
-          "alt": "Lumatask homepage"
-        }
-      ]
-    },
-    {
-      "slug": "essu-ccs-entrance-exam",
-      "name": "ESSU CCS Entrance Exam",
-      "title": "ESSU CCS entrance exam platform",
-      "summary": "Online entrance exam for applicants to the College of Computer Studies at ESSU Guiuan, with an admin dashboard for questions and results.",
-      "role": null,
-      "year": "2025–2026",
-      "stack": [
-        "PHP",
-        "MySQL",
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "html2pdf.js",
-        "Resend"
-      ],
-      "cardStack": [
-        "PHP",
-        "MySQL",
-        "JavaScript"
-      ],
-      "links": {
-        "live": null,
-        "source": "https://github.com/jersoncaibog/essu-ccs-entrance-exam"
-      },
-      "stats": [
-        {
-          "value": "20",
-          "label": "random questions per attempt"
-        },
-        {
-          "value": "10 min",
-          "label": "timed exam"
-        }
-      ],
-      "points": [
-        {
-          "label": "Exam engine",
-          "text": "Each attempt draws 20 questions at random from the bank and runs on a 10-minute timer, with the result saved and downloadable as a PDF."
-        },
-        {
-          "label": "One attempt each",
-          "text": "Applicants register with their 12-digit LRN, and a score already on file for that LRN blocks a retake."
-        },
-        {
-          "label": "Admin dashboard",
-          "text": "Admins manage the question bank, filter results by senior high strand, and export questions and student records to Excel."
-        },
-        {
-          "label": "Account security",
-          "text": "Changing the admin login requires a 6-digit code sent by email through Resend, valid for 10 minutes."
-        }
-      ],
-      "images": [
-        {
-          "src": "/work/essu-ccs-entrance-exam/1.webp",
-          "alt": "Applicant registration form with admin login",
-          "caption": "Applicant registration"
-        },
-        {
-          "src": "/work/essu-ccs-entrance-exam/2.webp",
-          "alt": "Timed exam page with instructions and question navigation",
-          "caption": "Timed exam"
-        },
-        {
-          "src": "/work/essu-ccs-entrance-exam/3.webp",
-          "alt": "Admin student records table with strand filter and export",
-          "caption": "Admin student records"
-        }
-      ]
+      "featured": true,
+      "org": "Prostrive BV"
     },
     {
       "slug": "student-council-system",
@@ -1569,7 +487,7 @@
       "title": "Student Council Attendance & Fines System",
       "summary": "Users, events, attendance and fines for a student council serving about 6,000 students.",
       "role": "Full-stack developer",
-      "year": "2024–2025",
+      "year": "2025",
       "stack": [
         "React",
         "Tailwind CSS",
@@ -1632,7 +550,461 @@
           "alt": "Staff login dialog for the student council system",
           "caption": "Staff login"
         }
-      ]
+      ],
+      "featured": true,
+      "org": "ESSU"
+    },
+    {
+      "slug": "gesture-smart-home",
+      "name": "Gesture-Controlled Smart Home",
+      "title": "Gesture-Controlled Smart Home",
+      "summary": "Capstone project: touchless smart home control with custom hand gestures, running offline on ESP32 hardware.",
+      "role": "Capstone project",
+      "year": "2025",
+      "stack": [
+        "OpenCV",
+        "TensorFlow",
+        "ESP32",
+        "React",
+        "Tailwind CSS",
+        "FastAPI",
+        "WebSockets"
+      ],
+      "cardStack": [
+        "TensorFlow",
+        "ESP32",
+        "FastAPI"
+      ],
+      "links": {
+        "live": null,
+        "source": null,
+        "document": {
+          "label": "Read the paper",
+          "href": "/work/gesture-smart-home/capstone-paper.pdf"
+        }
+      },
+      "stats": [
+        {
+          "value": "92.83",
+          "label": "SUS usability score (Grade A)"
+        }
+      ],
+      "points": [
+        {
+          "label": "Computer vision",
+          "text": "Real-time detection of user-defined hand gestures with OpenCV and TensorFlow."
+        },
+        {
+          "label": "IoT hardware",
+          "text": "Appliances, lighting and security controlled through ESP32, ESP32-CAM and relay modules, with low latency offline."
+        },
+        {
+          "label": "Dashboard",
+          "text": "React and FastAPI dashboard with WebSockets for live video, monitoring and manual overrides."
+        },
+        {
+          "label": "Accessibility",
+          "text": "Custom gestures let each user pick motions that suit them."
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/gesture-smart-home/1.webp",
+          "alt": "Live demo of the gesture controls at the capstone defense",
+          "caption": "Live demo at the capstone defense"
+        },
+        {
+          "src": "/work/gesture-smart-home/2.webp",
+          "alt": "ESP32-CAM camera module in a mounted enclosure that captures hand gestures",
+          "caption": "Gesture camera (ESP32-CAM)"
+        },
+        {
+          "src": "/work/gesture-smart-home/3.webp",
+          "alt": "Smart device unit with an ESP32 board, relay module and contactor",
+          "caption": "Smart device unit: ESP32, relay and contactor"
+        },
+        {
+          "src": "/work/gesture-smart-home/4.webp",
+          "alt": "Web dashboard on a phone showing the camera stream and smart device toggles",
+          "caption": "Web dashboard with camera stream and device controls"
+        }
+      ],
+      "featured": true,
+      "org": "ESSU"
+    },
+    {
+      "slug": "status-pro",
+      "name": "Status Pro",
+      "title": "Status Pro recruitment website",
+      "summary": "Recruitment site with 800+ vacancies grouped by professional domain, where candidates search, save and apply for jobs.",
+      "role": "Full Stack Developer, Prostrive BV",
+      "year": "2026",
+      "stack": [
+        "WordPress",
+        "PHP",
+        "ACF Pro",
+        "Gravity Forms",
+        "Tailwind CSS 4",
+        "Vite"
+      ],
+      "cardStack": [
+        "WordPress",
+        "ACF Pro",
+        "Tailwind CSS 4"
+      ],
+      "links": {
+        "live": "https://status-pro.paddap.dev",
+        "source": null
+      },
+      "stats": [
+        {
+          "value": "802",
+          "label": "vacancies"
+        },
+        {
+          "value": "41",
+          "label": "content blocks"
+        },
+        {
+          "value": "42",
+          "label": "field groups"
+        },
+        {
+          "value": "10",
+          "label": "domain landing pages"
+        }
+      ],
+      "points": [
+        {
+          "label": "Integrations",
+          "text": "Applications go to Bullhorn through a Gravity Forms integration. The RecruitNow form switches on per job once the job has a RecruitNow ID."
+        },
+        {
+          "label": "Content model",
+          "text": "Each professional domain is a taxonomy term with its own landing page, kept in sync when terms are added or removed."
+        },
+        {
+          "label": "Job detail",
+          "text": "Job pages show a travel-time block using Google Directions, so candidates see the commute before they apply."
+        },
+        {
+          "label": "Architecture",
+          "text": "Full Site Editing theme with 41 ACF blocks whose fields are defined in code, styled with Tailwind 4 compiled by Vite."
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/status-pro/1.webp",
+          "alt": "Status Pro homepage"
+        }
+      ],
+      "featured": true,
+      "org": "Prostrive BV"
+    },
+    {
+      "slug": "spacem-online",
+      "name": "Space'M Online website",
+      "title": "Space'M Online agency website rebuild",
+      "summary": "Marketing site for an SEO agency with services, case studies, listicles, events and downloadable resources.",
+      "role": "Full Stack Developer, Prostrive BV",
+      "year": "2026",
+      "stack": [
+        "WordPress",
+        "PHP",
+        "ACF Pro",
+        "Tailwind CSS 4",
+        "Vite",
+        "Figma"
+      ],
+      "cardStack": [
+        "WordPress",
+        "ACF Pro",
+        "Tailwind CSS 4"
+      ],
+      "links": {
+        "live": null,
+        "source": null
+      },
+      "stats": [
+        {
+          "value": "88",
+          "label": "content blocks"
+        },
+        {
+          "value": "26",
+          "label": "render components"
+        },
+        {
+          "value": "5",
+          "label": "content types"
+        },
+        {
+          "value": "246",
+          "label": "commits"
+        }
+      ],
+      "points": [
+        {
+          "label": "Architecture",
+          "text": "Block theme where each of the 88 blocks is a folder with its own fields, template and styles, auto-loaded at boot. No block is registered by hand."
+        },
+        {
+          "label": "Migration",
+          "text": "Rebuilt from a job-board theme one module at a time, with the old code kept in legacy folders so the site stayed usable during the switch."
+        },
+        {
+          "label": "Content",
+          "text": "Long-form article pages with a sticky table of contents, scroll-spy highlighting, footnote anchors and a per-article sidebar CTA."
+        },
+        {
+          "label": "Design",
+          "text": "Built from Figma with the design cached in the repo, so every module can be checked against the source without new design API calls."
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/spacem-online/1.webp",
+          "alt": "Space'M Online website homepage"
+        }
+      ],
+      "featured": true,
+      "org": "Prostrive BV"
+    },
+    {
+      "slug": "haystack-people",
+      "name": "Haystack People",
+      "title": "Haystack People recruitment website",
+      "summary": "Bilingual recruitment site for tech and SaaS roles, with separate journeys for candidates and employers.",
+      "role": "Full Stack Developer, Prostrive BV",
+      "year": "2026",
+      "stack": [
+        "WordPress",
+        "PHP",
+        "Toolset",
+        "WPML",
+        "MySQL",
+        "Contact Form 7"
+      ],
+      "cardStack": [
+        "WordPress",
+        "Toolset",
+        "WPML"
+      ],
+      "links": {
+        "live": "https://haystackpeople.nl",
+        "source": null
+      },
+      "stats": [
+        {
+          "value": "3,348",
+          "label": "vacancies"
+        },
+        {
+          "value": "2",
+          "label": "languages"
+        },
+        {
+          "value": "44",
+          "label": "content templates"
+        },
+        {
+          "value": "21",
+          "label": "page modules"
+        }
+      ],
+      "points": [
+        {
+          "label": "Integration",
+          "text": "Vacancies come in from the OTYS recruitment system through a custom WordPress plugin."
+        },
+        {
+          "label": "Localisation",
+          "text": "Dutch and English versions run on WPML, with separate SEO landing pages per role group for candidates and employers."
+        },
+        {
+          "label": "Architecture",
+          "text": "Pages are assembled from reusable Toolset modules, so editors can build new landing pages without code."
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/haystack-people/1.webp",
+          "alt": "Haystack People homepage"
+        }
+      ],
+      "org": "Prostrive BV"
+    },
+    {
+      "slug": "essu-ccs-entrance-exam",
+      "name": "ESSU CCS Entrance Exam",
+      "title": "ESSU CCS entrance exam platform",
+      "summary": "Online entrance exam for applicants to the College of Computer Studies at ESSU Guiuan, with an admin dashboard for questions and results.",
+      "role": null,
+      "year": "2026",
+      "stack": [
+        "PHP",
+        "MySQL",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "html2pdf.js",
+        "Resend"
+      ],
+      "cardStack": [
+        "PHP",
+        "MySQL",
+        "JavaScript"
+      ],
+      "links": {
+        "live": null,
+        "source": "https://github.com/jersoncaibog/essu-ccs-entrance-exam"
+      },
+      "stats": [
+        {
+          "value": "20",
+          "label": "random questions per attempt"
+        },
+        {
+          "value": "10 min",
+          "label": "timed exam"
+        }
+      ],
+      "points": [
+        {
+          "label": "Exam engine",
+          "text": "Each attempt draws 20 questions at random from the bank and runs on a 10-minute timer, with the result saved and downloadable as a PDF."
+        },
+        {
+          "label": "One attempt each",
+          "text": "Applicants register with their 12-digit LRN, and a score already on file for that LRN blocks a retake."
+        },
+        {
+          "label": "Admin dashboard",
+          "text": "Admins manage the question bank, filter results by senior high strand, and export questions and student records to Excel."
+        },
+        {
+          "label": "Account security",
+          "text": "Changing the admin login requires a 6-digit code sent by email through Resend, valid for 10 minutes."
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/essu-ccs-entrance-exam/1.webp",
+          "alt": "Applicant registration form with admin login",
+          "caption": "Applicant registration"
+        },
+        {
+          "src": "/work/essu-ccs-entrance-exam/2.webp",
+          "alt": "Timed exam page with instructions and question navigation",
+          "caption": "Timed exam"
+        },
+        {
+          "src": "/work/essu-ccs-entrance-exam/3.webp",
+          "alt": "Admin student records table with strand filter and export",
+          "caption": "Admin student records"
+        }
+      ],
+      "org": "ESSU"
+    },
+    {
+      "slug": "elstar-dynamics",
+      "name": "eLstar Dynamics",
+      "title": "eLstar Dynamics corporate and careers website",
+      "summary": "Corporate and careers site for a smart-glass manufacturer, covering its technology, target markets and vacancies.",
+      "role": "Full Stack Developer, Prostrive BV",
+      "year": "2026",
+      "stack": [
+        "WordPress",
+        "PHP",
+        "Toolset",
+        "MySQL",
+        "WP Rocket",
+        "Redis",
+        "DigitalOcean (Ploi)"
+      ],
+      "cardStack": [
+        "WordPress",
+        "Toolset",
+        "PHP"
+      ],
+      "links": {
+        "live": "https://elstar-dynamics.com",
+        "source": null
+      },
+      "stats": [
+        {
+          "value": "20",
+          "label": "pages"
+        },
+        {
+          "value": "199",
+          "label": "page sections"
+        },
+        {
+          "value": "162",
+          "label": "content templates"
+        },
+        {
+          "value": "11",
+          "label": "custom post types"
+        }
+      ],
+      "points": [
+        {
+          "label": "Architecture",
+          "text": "Pages are built from reusable Toolset sections stored as posts, so editors compose layouts without touching theme code."
+        },
+        {
+          "label": "Careers",
+          "text": "Vacancy listings with favourites, job alerts, open applications and a salary calculator built on 3 custom post types."
+        },
+        {
+          "label": "Performance",
+          "text": "Pages are served through WP Rocket, a Redis object cache and an nginx page cache, with minified asset bundles."
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/elstar-dynamics/1.webp",
+          "alt": "eLstar Dynamics homepage"
+        }
+      ],
+      "org": "Prostrive BV"
+    },
+    {
+      "slug": "verzendnl",
+      "name": "VerzendNL",
+      "title": "VerzendNL",
+      "summary": "Client platform built during my internship at Prostrive, from architecture to deployment.",
+      "role": "Full Stack Developer Intern, Prostrive BV",
+      "year": "2025",
+      "stack": [
+        "React",
+        "Next.js",
+        "Tailwind CSS"
+      ],
+      "cardStack": [
+        "Next.js",
+        "Tailwind CSS"
+      ],
+      "links": {
+        "live": "https://verzend-nl.vercel.app",
+        "source": null
+      },
+      "stats": [],
+      "points": [
+        {
+          "label": "Full-stack delivery",
+          "text": "Built with React, Next.js and Tailwind CSS from architecture to deployment, in an Agile team with designers and QA."
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/verzendnl/1.webp",
+          "alt": "VerzendNL homepage"
+        }
+      ],
+      "org": "Prostrive BV"
     },
     {
       "slug": "presenxia",
@@ -1687,58 +1059,106 @@
           "text": "Students can be registered in bulk from a CSV file, and finished events move to an archive with their attendance."
         }
       ],
-      "images": []
+      "images": [],
+      "org": "ESSU"
     },
     {
-      "slug": "gesture-smart-home",
-      "name": "Gesture-Controlled Smart Home",
-      "title": "Gesture-Controlled Smart Home",
-      "summary": "Capstone project: touchless smart home control with custom hand gestures, running offline on ESP32 hardware.",
-      "role": "Capstone project",
-      "year": "2024–2025",
+      "slug": "treffers-groep",
+      "name": "Treffers Groep",
+      "title": "Treffers Groep recruitment website",
+      "summary": "Recruitment site for candidates and employers, with vacancies, a salary calculator and online applications.",
+      "role": "Full Stack Developer, Prostrive BV",
+      "year": "2026",
       "stack": [
-        "OpenCV",
-        "TensorFlow",
-        "ESP32",
-        "React",
-        "Tailwind CSS",
-        "FastAPI",
-        "WebSockets"
+        "WordPress",
+        "PHP",
+        "Toolset",
+        "MySQL",
+        "Contact Form 7"
       ],
       "cardStack": [
-        "TensorFlow",
-        "ESP32",
-        "FastAPI"
+        "WordPress",
+        "Toolset",
+        "PHP"
       ],
       "links": {
-        "live": null,
+        "live": "https://treffers-groep.paddap.dev",
         "source": null
       },
       "stats": [
         {
-          "value": "92.83",
-          "label": "SUS usability score (Grade A)"
+          "value": "58",
+          "label": "page modules"
+        },
+        {
+          "value": "140",
+          "label": "content templates"
+        },
+        {
+          "value": "44",
+          "label": "query views"
+        },
+        {
+          "value": "11",
+          "label": "custom post types"
         }
       ],
       "points": [
         {
-          "label": "Computer vision",
-          "text": "Real-time detection of user-defined hand gestures with OpenCV and TensorFlow."
+          "label": "Integration",
+          "text": "Custom plugins connect the site to Talentwave and the PADDAP ATS, with scheduled syncs."
         },
         {
-          "label": "IoT hardware",
-          "text": "Appliances, lighting and security controlled through ESP32, ESP32-CAM and relay modules, with low latency offline."
+          "label": "Tools",
+          "text": "Salary calculator built from its own post types for experience and hours, editable without code."
         },
         {
-          "label": "Dashboard",
-          "text": "React and FastAPI dashboard with WebSockets for live video, monitoring and manual overrides."
-        },
-        {
-          "label": "Accessibility",
-          "text": "Custom gestures let each user pick motions that suit them."
+          "label": "Applications",
+          "text": "A CV generator plugin turns form submissions into CVs, and a REST endpoint keeps vacancy dates fresh for job boards."
         }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "/work/treffers-groep/1.webp",
+          "alt": "Treffers Groep homepage"
+        }
+      ],
+      "org": "Prostrive BV"
+    },
+    {
+      "slug": "lumatask",
+      "name": "Lumatask",
+      "title": "Lumatask",
+      "summary": "Client platform built during my internship at Prostrive, from architecture to deployment.",
+      "role": "Full Stack Developer Intern, Prostrive BV",
+      "year": "2025",
+      "stack": [
+        "React",
+        "Next.js",
+        "Tailwind CSS"
+      ],
+      "cardStack": [
+        "React",
+        "Next.js"
+      ],
+      "links": {
+        "live": "https://lumatask.vercel.app",
+        "source": null
+      },
+      "stats": [],
+      "points": [
+        {
+          "label": "Full-stack delivery",
+          "text": "Built with React, Next.js and Tailwind CSS from architecture to deployment, in an Agile team with designers and QA."
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/lumatask/1.webp",
+          "alt": "Lumatask homepage"
+        }
+      ],
+      "org": "Prostrive BV"
     },
     {
       "slug": "temperature-forecaster",
@@ -1788,49 +1208,76 @@
           "text": "Started as a Node.js script that converted the CSV records to JSON and fitted a linear regression, then grew into the web app."
         }
       ],
-      "images": []
+      "images": [],
+      "org": "Personal project"
     },
     {
-      "slug": "potatochat",
-      "name": "PotatoChat",
-      "title": "PotatoChat real-time chat app",
-      "summary": "Chat app with Google or email sign-in, where messages appear live without refreshing.",
-      "role": null,
-      "year": "2024",
+      "slug": "effectzorg-recruitment-site",
+      "name": "Effectzorg recruitment site",
+      "title": "Effectzorg — healthcare recruitment site",
+      "summary": "Careers site for a Dutch healthcare recruitment agency, with radius-based vacancy search and ATS-linked applications.",
+      "role": "Full Stack Developer, Prostrive BV",
+      "year": "2026",
       "stack": [
-        "Next.js",
-        "TypeScript",
-        "Supabase",
-        "NextAuth.js",
-        "Chakra UI",
-        "Tailwind CSS"
+        "WordPress 6.7 (FSE)",
+        "PHP",
+        "Advanced Custom Fields Pro",
+        "Tailwind CSS v4",
+        "Vite",
+        "Google Maps Platform"
       ],
       "cardStack": [
-        "Next.js",
-        "Supabase",
-        "NextAuth.js"
+        "WordPress",
+        "PHP",
+        "Tailwind CSS"
       ],
       "links": {
-        "live": null,
+        "live": "https://effectzorg.nl",
         "source": null
       },
       "stats": [
         {
+          "value": "37",
+          "label": "ACF blocks"
+        },
+        {
+          "value": "13",
+          "label": "reusable components"
+        },
+        {
+          "value": "8",
+          "label": "site templates"
+        },
+        {
           "value": "7",
-          "label": "days from first to last commit"
+          "label": "job taxonomies"
         }
       ],
       "points": [
         {
-          "label": "Real-time",
-          "text": "New messages arrive through a Supabase Realtime subscription, so open conversations update instantly."
+          "label": "Module system",
+          "text": "Each folder in modules/ with block.json, module.php and fields.php self-registers via one auto-loader. Field groups live in code, so deploys need no DB import."
         },
         {
-          "label": "Auth",
-          "text": "NextAuth.js handles Google sign-in and email and password accounts."
+          "label": "Location search",
+          "text": "Vacancy search filters by Haversine distance over a REST endpoint and returns server-rendered cards. Typed locations geocode server-side, cached hourly."
+        },
+        {
+          "label": "Build pipeline",
+          "text": "Tailwind v4 compiles through Vite, and the compiled stylesheet is committed because the production host has no Node, so builds happen before push."
+        },
+        {
+          "label": "Saved jobs",
+          "text": "Visitors save vacancies to localStorage with no account. A JS card builder mirrors the PHP one so saved and live listings render identically."
         }
       ],
-      "images": []
+      "images": [
+        {
+          "src": "/work/effectzorg-recruitment-site/1.webp",
+          "alt": "Effectzorg recruitment site homepage"
+        }
+      ],
+      "org": "Prostrive BV"
     },
     {
       "slug": "mern-chat-app",
@@ -1886,28 +1333,97 @@
           "text": "React, TypeScript and Vite with Chakra UI, and a Zustand store holding the signed-in user."
         }
       ],
-      "images": []
+      "images": [],
+      "org": "Personal project"
     },
     {
-      "slug": "student-e-index",
-      "name": "Student E-Index System",
-      "title": "RFID student e-index system",
-      "summary": "Student record system where tapping an RFID card pulls up a student's subjects, grades and attendance.",
-      "role": "Freelance developer",
-      "year": "2025",
+      "slug": "werken-bij-centiv",
+      "name": "Werken bij Centiv",
+      "title": "Werken bij Centiv careers site",
+      "summary": "Careers site for a mental health care provider where candidates search vacancies, save favourites and apply online.",
+      "role": "Full Stack Developer, Prostrive BV",
+      "year": "2026",
       "stack": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Bootstrap",
-        "Node.js",
-        "Express",
-        "MariaDB"
+        "WordPress",
+        "PHP",
+        "Toolset",
+        "MySQL",
+        "Contact Form 7",
+        "GSAP",
+        "Nginx"
       ],
       "cardStack": [
-        "Node.js",
-        "Express",
-        "MariaDB"
+        "WordPress",
+        "PHP",
+        "Toolset"
+      ],
+      "links": {
+        "live": "https://werkenbijcentiv.nl",
+        "source": null
+      },
+      "stats": [
+        {
+          "value": "52",
+          "label": "page modules"
+        },
+        {
+          "value": "32",
+          "label": "query views"
+        },
+        {
+          "value": "6",
+          "label": "custom post types"
+        },
+        {
+          "value": "6",
+          "label": "custom taxonomies"
+        }
+      ],
+      "points": [
+        {
+          "label": "Architecture",
+          "text": "Editors build pages from 52 reusable Toolset modules (heroes, vacancy overviews, testimonials, USP blocks), so new pages need no code."
+        },
+        {
+          "label": "Search",
+          "text": "Vacancy search rewrites the Toolset query so one search box matches job titles, locations and employment types."
+        },
+        {
+          "label": "Job feeds",
+          "text": "A key-protected REST endpoint refreshes a quarter of the vacancies per call, and a daily export is written to a fixed XML feed for job boards."
+        },
+        {
+          "label": "Performance",
+          "text": "The home page drops about 85 KB of unused plugin CSS and JS by removing them from Toolset's dependency chains at the right hook."
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/werken-bij-centiv/1.webp",
+          "alt": "Werken bij Centiv homepage"
+        }
+      ],
+      "org": "Prostrive BV"
+    },
+    {
+      "slug": "potatochat",
+      "name": "PotatoChat",
+      "title": "PotatoChat real-time chat app",
+      "summary": "Chat app with Google or email sign-in, where messages appear live without refreshing.",
+      "role": null,
+      "year": "2024",
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "Supabase",
+        "NextAuth.js",
+        "Chakra UI",
+        "Tailwind CSS"
+      ],
+      "cardStack": [
+        "Next.js",
+        "Supabase",
+        "NextAuth.js"
       ],
       "links": {
         "live": null,
@@ -1915,40 +1431,538 @@
       },
       "stats": [
         {
-          "value": "4",
-          "label": "database tables"
+          "value": "7",
+          "label": "days from first to last commit"
         }
       ],
       "points": [
         {
-          "label": "RFID lookup",
-          "text": "Tapping a student's RFID card opens their record straight away, with no searching."
+          "label": "Real-time",
+          "text": "New messages arrive through a Supabase Realtime subscription, so open conversations update instantly."
         },
         {
-          "label": "Records",
-          "text": "Subjects, academic records and attendance are kept per student, with filtering and search."
+          "label": "Auth",
+          "text": "NextAuth.js handles Google sign-in and email and password accounts."
         }
       ],
-      "images": []
+      "images": [],
+      "org": "Personal project"
     },
     {
-      "slug": "appliance-repair-tracker",
-      "name": "Appliance Repair Tracker",
-      "title": "RFID appliance repair tracking system",
-      "summary": "Repair shop system where each appliance carries an RFID tag, so staff can scan it to see and update the repair job.",
-      "role": "Freelance developer",
-      "year": "2025",
+      "slug": "ras-recruitment",
+      "name": "RAS Recruitment",
+      "title": "RAS Recruitment website",
+      "summary": "Recruitment agency site where candidates browse jobs by sector and apply, and employers learn about the agency's services.",
+      "role": "Full Stack Developer, Prostrive BV",
+      "year": "2026",
       "stack": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Node.js",
-        "Express",
+        "WordPress",
+        "PHP",
+        "ACF Pro",
+        "Gravity Forms",
+        "Tailwind CSS 4",
+        "Vite"
+      ],
+      "cardStack": [
+        "WordPress",
+        "ACF Pro",
+        "Tailwind CSS 4"
+      ],
+      "links": {
+        "live": "https://ras-recruitment.paddap.dev",
+        "source": null
+      },
+      "stats": [
+        {
+          "value": "44",
+          "label": "content blocks"
+        },
+        {
+          "value": "42",
+          "label": "field groups"
+        },
+        {
+          "value": "15",
+          "label": "render components"
+        },
+        {
+          "value": "3",
+          "label": "ATS connectors"
+        }
+      ],
+      "points": [
+        {
+          "label": "Integration",
+          "text": "ATS plugin with a connector registry covering 3 applicant tracking systems, syncing jobs every hour through WP-Cron."
+        },
+        {
+          "label": "Search",
+          "text": "Job filters run through a custom REST endpoint with sanitised parameters, so the results update without a page reload."
+        },
+        {
+          "label": "Architecture",
+          "text": "Full Site Editing theme with ACF blocks whose fields are defined in code, plus Tailwind 4 compiled by Vite into one committed stylesheet."
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/ras-recruitment/1.webp",
+          "alt": "RAS Recruitment homepage"
+        }
+      ],
+      "org": "Prostrive BV"
+    },
+    {
+      "slug": "werken-bij-curamare",
+      "name": "Werken bij Curamare",
+      "title": "Werken bij Curamare careers site",
+      "summary": "Careers site for a regional care organisation, with vacancies by workplace, employee stories and online applications.",
+      "role": "Full Stack Developer, Prostrive BV",
+      "year": "2026",
+      "stack": [
+        "WordPress",
+        "PHP",
+        "Toolset",
+        "MySQL",
+        "Contact Form 7"
+      ],
+      "cardStack": [
+        "WordPress",
+        "Toolset",
+        "PHP"
+      ],
+      "links": {
+        "live": "https://werkenbijcuramare.nl",
+        "source": null
+      },
+      "stats": [
+        {
+          "value": "73",
+          "label": "vacancies"
+        },
+        {
+          "value": "58",
+          "label": "employee stories"
+        },
+        {
+          "value": "40",
+          "label": "content templates"
+        },
+        {
+          "value": "5",
+          "label": "taxonomies"
+        }
+      ],
+      "points": [
+        {
+          "label": "Integration",
+          "text": "Vacancies come from AFAS through a custom plugin with a scheduled sync."
+        },
+        {
+          "label": "Applications",
+          "text": "Candidates can build a CV on the site, generated from their form entry by a custom plugin."
+        },
+        {
+          "label": "Filtering",
+          "text": "Vacancies are filtered by workplace, location, education level, contract type and weekly hours."
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/werken-bij-curamare/1.webp",
+          "alt": "Werken bij Curamare homepage"
+        }
+      ],
+      "org": "Prostrive BV"
+    },
+    {
+      "slug": "clubgeist",
+      "name": "Clubgeist",
+      "title": "Clubgeist creative agency website",
+      "summary": "Bilingual website for a creative advertising agency in Rotterdam, showing its services, cases and news.",
+      "role": "Full Stack Developer, Prostrive BV",
+      "year": "2026",
+      "stack": [
+        "WordPress",
+        "PHP",
+        "Toolset",
+        "WPML",
+        "MySQL",
+        "DigitalOcean (Ploi)"
+      ],
+      "cardStack": [
+        "WordPress",
+        "Toolset",
+        "WPML"
+      ],
+      "links": {
+        "live": "https://clubgeist.nl",
+        "source": null
+      },
+      "stats": [
+        {
+          "value": "17",
+          "label": "pages"
+        },
+        {
+          "value": "44",
+          "label": "case studies"
+        },
+        {
+          "value": "288",
+          "label": "case modules"
+        },
+        {
+          "value": "2",
+          "label": "languages"
+        }
+      ],
+      "points": [
+        {
+          "label": "Case studies",
+          "text": "Each case is built from reusable modules, giving 288 sections across 44 cases without one-off templates."
+        },
+        {
+          "label": "Multilingual",
+          "text": "Dutch and English content managed through WPML, including translated strings and forms."
+        },
+        {
+          "label": "Content model",
+          "text": "5 custom post types for modules, cases, case modules, news and vacancies."
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/clubgeist/1.webp",
+          "alt": "Clubgeist homepage"
+        }
+      ],
+      "org": "Prostrive BV"
+    },
+    {
+      "slug": "aurea-imaging",
+      "name": "Aurea Imaging",
+      "title": "Aurea Imaging TreeScout product website",
+      "summary": "Bilingual product site for an agtech company, presenting its TreeScout platform to growers.",
+      "role": "Full Stack Developer, Prostrive BV",
+      "year": "2026",
+      "stack": [
+        "WordPress",
+        "PHP",
+        "Toolset",
+        "WPML",
+        "MySQL",
+        "DigitalOcean (Ploi)"
+      ],
+      "cardStack": [
+        "WordPress",
+        "Toolset",
+        "WPML"
+      ],
+      "links": {
+        "live": "https://aureaimaging.com",
+        "source": null
+      },
+      "stats": [
+        {
+          "value": "10",
+          "label": "pages"
+        },
+        {
+          "value": "63",
+          "label": "blog modules"
+        },
+        {
+          "value": "6",
+          "label": "custom post types"
+        },
+        {
+          "value": "2",
+          "label": "languages"
+        }
+      ],
+      "points": [
+        {
+          "label": "Blog system",
+          "text": "Blog posts are assembled from 63 reusable modules, so articles mix text, media and layouts without custom code."
+        },
+        {
+          "label": "Multilingual",
+          "text": "English and Dutch content managed through WPML, including multilingual contact forms."
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/aurea-imaging/1.webp",
+          "alt": "Aurea Imaging homepage"
+        }
+      ],
+      "org": "Prostrive BV"
+    },
+    {
+      "slug": "goodrecruit",
+      "name": "GoodRecruit",
+      "title": "GoodRecruit recruitment agency website",
+      "summary": "Website for a recruitment agency in Finance, HR and Sales, with job listings, applications and job alerts.",
+      "role": "Full Stack Developer, Prostrive BV",
+      "year": "2026",
+      "stack": [
+        "WordPress (block theme)",
+        "PHP",
+        "ACF Pro",
+        "Tailwind CSS 4",
+        "Vite 6",
+        "Gravity Forms",
         "MySQL"
       ],
       "cardStack": [
-        "Node.js",
-        "Express",
+        "WordPress",
+        "Tailwind CSS",
+        "ACF Pro"
+      ],
+      "links": {
+        "live": "https://goodrecruit.paddap.dev",
+        "source": null
+      },
+      "stats": [
+        {
+          "value": "22",
+          "label": "block modules"
+        },
+        {
+          "value": "7",
+          "label": "page templates"
+        },
+        {
+          "value": "16",
+          "label": "shared components"
+        },
+        {
+          "value": "28",
+          "label": "commits"
+        }
+      ],
+      "points": [
+        {
+          "label": "Architecture",
+          "text": "Each section is a self-contained block module that is loaded automatically, so new sections need no wiring."
+        },
+        {
+          "label": "Content model",
+          "text": "Custom post types, options and seed content are defined in code, so a fresh install comes up with the full structure."
+        },
+        {
+          "label": "Job flow",
+          "text": "Job overviews, a single-job template, applications, open applications and job alerts make up the candidate journey."
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/goodrecruit/1.webp",
+          "alt": "GoodRecruit homepage"
+        }
+      ],
+      "org": "Prostrive BV"
+    },
+    {
+      "slug": "jit-staffing",
+      "name": "JIT Staffing",
+      "title": "JIT Staffing staffing agency website",
+      "summary": "Website for a staffing agency, where candidates browse jobs, save favourites and apply.",
+      "role": "Full Stack Developer, Prostrive BV",
+      "year": "2026",
+      "stack": [
+        "WordPress (block theme)",
+        "PHP",
+        "ACF Pro",
+        "Tailwind CSS 4",
+        "Vite 6",
+        "Gravity Forms",
+        "MySQL"
+      ],
+      "cardStack": [
+        "WordPress",
+        "Tailwind CSS",
+        "ACF Pro"
+      ],
+      "links": {
+        "live": "https://jitstaffing.paddap.dev",
+        "source": null
+      },
+      "stats": [
+        {
+          "value": "35",
+          "label": "block modules"
+        },
+        {
+          "value": "8",
+          "label": "page templates"
+        },
+        {
+          "value": "14",
+          "label": "shared components"
+        }
+      ],
+      "points": [
+        {
+          "label": "Architecture",
+          "text": "35 block modules, the largest set in this theme family, covering carousels, sliders, expanding rows and tabbed job blocks."
+        },
+        {
+          "label": "Job flow",
+          "text": "Job listings, job details, related jobs, favourites, a callback form and a step-by-step application process."
+        },
+        {
+          "label": "Integrations",
+          "text": "Google Reviews and Gravity Forms are built into the page modules."
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/jit-staffing/1.webp",
+          "alt": "JIT Staffing homepage"
+        }
+      ],
+      "org": "Prostrive BV"
+    },
+    {
+      "slug": "directvacature",
+      "name": "DirectVacature",
+      "title": "DirectVacature job board",
+      "summary": "Job board that connects job seekers with employers, with vacancy search, favourites and employer profiles.",
+      "role": "Full Stack Developer, Prostrive BV",
+      "year": "2026",
+      "stack": [
+        "WordPress (block theme)",
+        "PHP",
+        "ACF Pro",
+        "Tailwind CSS 4",
+        "Vite 6",
+        "Gravity Forms",
+        "MySQL"
+      ],
+      "cardStack": [
+        "WordPress",
+        "Tailwind CSS",
+        "ACF Pro"
+      ],
+      "links": {
+        "live": "https://directvacature.paddap.dev",
+        "source": null
+      },
+      "stats": [
+        {
+          "value": "24",
+          "label": "block modules"
+        },
+        {
+          "value": "9",
+          "label": "page templates"
+        },
+        {
+          "value": "19",
+          "label": "shared components"
+        }
+      ],
+      "points": [
+        {
+          "label": "Two-sided",
+          "text": "Separate flows for job seekers and employers, including employer sign-up and an employer profile template."
+        },
+        {
+          "label": "Job seeker tools",
+          "text": "Saved favourite jobs, similar-job suggestions, job alerts and open applications."
+        },
+        {
+          "label": "Architecture",
+          "text": "24 self-contained block modules with dedicated templates for jobs, employers and content pages."
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/directvacature/1.webp",
+          "alt": "DirectVacature homepage"
+        }
+      ],
+      "org": "Prostrive BV"
+    },
+    {
+      "slug": "work-in-society",
+      "name": "Work in Society",
+      "title": "Work in Society recruitment website",
+      "summary": "Recruitment site for technical and IT roles, with vacancies, an open application and job alerts.",
+      "role": "Full Stack Developer, Prostrive BV",
+      "year": "2026",
+      "stack": [
+        "WordPress",
+        "PHP",
+        "Toolset",
+        "MySQL",
+        "Contact Form 7"
+      ],
+      "cardStack": [
+        "WordPress",
+        "Toolset",
+        "PHP"
+      ],
+      "links": {
+        "live": "https://workinsociety.com",
+        "source": null
+      },
+      "stats": [
+        {
+          "value": "48",
+          "label": "content templates"
+        },
+        {
+          "value": "20",
+          "label": "page modules"
+        },
+        {
+          "value": "9",
+          "label": "query views"
+        },
+        {
+          "value": "24",
+          "label": "vacancies"
+        }
+      ],
+      "points": [
+        {
+          "label": "Architecture",
+          "text": "Pages are assembled from 20 reusable Toolset modules, so editors build pages without code."
+        },
+        {
+          "label": "Engagement",
+          "text": "Job alerts, saved favourite vacancies, an Instagram feed and Google reviews, the feeds refreshed by scheduled jobs."
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/work-in-society/1.webp",
+          "alt": "Work in Society homepage"
+        }
+      ],
+      "org": "Prostrive BV"
+    },
+    {
+      "slug": "library-rfid-logbook",
+      "name": "Library RFID Logbook",
+      "title": "Library RFID logbook",
+      "summary": "Library visit logbook where students check in with an RFID card, with a visit log, student records and CSV export.",
+      "role": "Freelance developer",
+      "year": "2025",
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "Prisma",
+        "MySQL",
+        "Tailwind CSS",
+        "shadcn/ui"
+      ],
+      "cardStack": [
+        "Next.js",
+        "Prisma",
         "MySQL"
       ],
       "links": {
@@ -1958,15 +1972,16 @@
       "stats": [],
       "points": [
         {
-          "label": "RFID tags",
-          "text": "Scanning an item's tag opens its repair job, customer details and status."
+          "label": "Check-in",
+          "text": "Students tap their RFID card to log a visit, and the dashboard updates in real time."
         },
         {
-          "label": "Repair history",
-          "text": "Every status change is logged, and jobs can be searched by tag and filtered by status, with pagination."
+          "label": "Visit log",
+          "text": "Visits can be filtered and paged through, exported to CSV, and ranked on a most-visits leaderboard."
         }
       ],
-      "images": []
+      "images": [],
+      "org": "Freelance"
     },
     {
       "slug": "loan-management-system",
@@ -2008,160 +2023,8 @@
           "text": "Loan requests, payments and a transaction history, with a fixed 6% interest applied to the current balance."
         }
       ],
-      "images": []
-    },
-    {
-      "slug": "library-rfid-logbook",
-      "name": "Library RFID Logbook",
-      "title": "Library RFID logbook",
-      "summary": "Library visit logbook where students check in with an RFID card, with a visit log, student records and CSV export.",
-      "role": "Freelance developer",
-      "year": "2025",
-      "stack": [
-        "Next.js",
-        "TypeScript",
-        "Prisma",
-        "MySQL",
-        "Tailwind CSS",
-        "shadcn/ui"
-      ],
-      "cardStack": [
-        "Next.js",
-        "Prisma",
-        "MySQL"
-      ],
-      "links": {
-        "live": null,
-        "source": null
-      },
-      "stats": [],
-      "points": [
-        {
-          "label": "Check-in",
-          "text": "Students tap their RFID card to log a visit, and the dashboard updates in real time."
-        },
-        {
-          "label": "Visit log",
-          "text": "Visits can be filtered and paged through, exported to CSV, and ranked on a most-visits leaderboard."
-        }
-      ],
-      "images": []
-    },
-    {
-      "slug": "library-visit-tracker",
-      "name": "Library Visit Tracker",
-      "title": "RFID library visit tracking system",
-      "summary": "A second library check-in system built for a different library, with duplicate-scan protection and bulk student import.",
-      "role": "Freelance developer",
-      "year": "2025",
-      "stack": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Node.js",
-        "Express",
-        "MySQL"
-      ],
-      "cardStack": [
-        "Node.js",
-        "Express",
-        "MySQL"
-      ],
-      "links": {
-        "live": null,
-        "source": null
-      },
-      "stats": [
-        {
-          "value": "5 min",
-          "label": "duplicate check-in cooldown"
-        }
-      ],
-      "points": [
-        {
-          "label": "Check-in",
-          "text": "A second scan of the same card within 5 minutes is ignored, so double taps don't create duplicate visits."
-        },
-        {
-          "label": "Students",
-          "text": "Student records can be imported and exported in bulk, with search, filters and pagination."
-        }
-      ],
-      "images": []
-    },
-    {
-      "slug": "motor-parts-inventory",
-      "name": "Motor Parts Inventory",
-      "title": "RFID motor parts inventory system",
-      "summary": "Inventory system for a motor parts shop, where each part is identified by an RFID tag and stock moves with every supply or sale.",
-      "role": "Freelance developer",
-      "year": "2025",
-      "stack": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Node.js",
-        "Express",
-        "MySQL"
-      ],
-      "cardStack": [
-        "Node.js",
-        "Express",
-        "MySQL"
-      ],
-      "links": {
-        "live": null,
-        "source": null
-      },
-      "stats": [],
-      "points": [
-        {
-          "label": "Stock",
-          "text": "Every part has an RFID tag, a brand, a category and a shelf location, so staff can scan it to find stock and price."
-        },
-        {
-          "label": "Transactions",
-          "text": "Supply deliveries and sales are recorded against each tag and update the quantity on hand."
-        }
-      ],
-      "images": []
-    },
-    {
-      "slug": "medical-records-system",
-      "name": "Medical Records System",
-      "title": "RFID medical records system",
-      "summary": "Clinic records system where each patient has an RFID card that opens their visit history.",
-      "role": "Freelance developer",
-      "year": "2025",
-      "stack": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Node.js",
-        "Express",
-        "MySQL"
-      ],
-      "cardStack": [
-        "Node.js",
-        "Express",
-        "MySQL"
-      ],
-      "links": {
-        "live": null,
-        "source": null
-      },
-      "stats": [],
-      "points": [
-        {
-          "label": "Patients",
-          "text": "Patients are registered with an RFID card number, and tapping it opens their profile."
-        },
-        {
-          "label": "Visits",
-          "text": "Each visit records the diagnosis, prescribed medication, treatment history and doctor's notes."
-        }
-      ],
-      "images": []
+      "images": [],
+      "org": "Freelance"
     },
     {
       "slug": "appliance-installment-system",
@@ -2203,49 +2066,8 @@
           "text": "Customers are identified by RFID card, and appliance stock is kept alongside the loans and payment records."
         }
       ],
-      "images": []
-    },
-    {
-      "slug": "subscription-billing-system",
-      "name": "Subscription Billing System",
-      "title": "RFID subscription billing system",
-      "summary": "Billing system for a subscription service, with customer plans, monthly due dates and payment records.",
-      "role": "Freelance developer",
-      "year": "2025",
-      "stack": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Node.js",
-        "Express",
-        "MySQL"
-      ],
-      "cardStack": [
-        "Node.js",
-        "Express",
-        "MySQL"
-      ],
-      "links": {
-        "live": null,
-        "source": null
-      },
-      "stats": [
-        {
-          "value": "3",
-          "label": "subscription plans"
-        }
-      ],
-      "points": [
-        {
-          "label": "Plans",
-          "text": "Customers sit on a Basic, Normal or Premium plan with their own monthly fee and due date."
-        },
-        {
-          "label": "Payments",
-          "text": "Payments are logged per billing month by cash, card or online, with a list of pending payments."
-        }
-      ],
-      "images": []
+      "images": [],
+      "org": "Freelance"
     },
     {
       "slug": "rfid-fare-payment-system",
@@ -2292,7 +2114,252 @@
           "text": "Built twice from the same base for two different operators, each with its own destination fares."
         }
       ],
-      "images": []
+      "images": [],
+      "org": "Freelance"
+    },
+    {
+      "slug": "subscription-billing-system",
+      "name": "Subscription Billing System",
+      "title": "RFID subscription billing system",
+      "summary": "Billing system for a subscription service, with customer plans, monthly due dates and payment records.",
+      "role": "Freelance developer",
+      "year": "2025",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Node.js",
+        "Express",
+        "MySQL"
+      ],
+      "cardStack": [
+        "Node.js",
+        "Express",
+        "MySQL"
+      ],
+      "links": {
+        "live": null,
+        "source": null
+      },
+      "stats": [
+        {
+          "value": "3",
+          "label": "subscription plans"
+        }
+      ],
+      "points": [
+        {
+          "label": "Plans",
+          "text": "Customers sit on a Basic, Normal or Premium plan with their own monthly fee and due date."
+        },
+        {
+          "label": "Payments",
+          "text": "Payments are logged per billing month by cash, card or online, with a list of pending payments."
+        }
+      ],
+      "images": [],
+      "org": "Freelance"
+    },
+    {
+      "slug": "medical-records-system",
+      "name": "Medical Records System",
+      "title": "RFID medical records system",
+      "summary": "Clinic records system where each patient has an RFID card that opens their visit history.",
+      "role": "Freelance developer",
+      "year": "2025",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Node.js",
+        "Express",
+        "MySQL"
+      ],
+      "cardStack": [
+        "Node.js",
+        "Express",
+        "MySQL"
+      ],
+      "links": {
+        "live": null,
+        "source": null
+      },
+      "stats": [],
+      "points": [
+        {
+          "label": "Patients",
+          "text": "Patients are registered with an RFID card number, and tapping it opens their profile."
+        },
+        {
+          "label": "Visits",
+          "text": "Each visit records the diagnosis, prescribed medication, treatment history and doctor's notes."
+        }
+      ],
+      "images": [],
+      "org": "Freelance"
+    },
+    {
+      "slug": "motor-parts-inventory",
+      "name": "Motor Parts Inventory",
+      "title": "RFID motor parts inventory system",
+      "summary": "Inventory system for a motor parts shop, where each part is identified by an RFID tag and stock moves with every supply or sale.",
+      "role": "Freelance developer",
+      "year": "2025",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Node.js",
+        "Express",
+        "MySQL"
+      ],
+      "cardStack": [
+        "Node.js",
+        "Express",
+        "MySQL"
+      ],
+      "links": {
+        "live": null,
+        "source": null
+      },
+      "stats": [],
+      "points": [
+        {
+          "label": "Stock",
+          "text": "Every part has an RFID tag, a brand, a category and a shelf location, so staff can scan it to find stock and price."
+        },
+        {
+          "label": "Transactions",
+          "text": "Supply deliveries and sales are recorded against each tag and update the quantity on hand."
+        }
+      ],
+      "images": [],
+      "org": "Freelance"
+    },
+    {
+      "slug": "student-e-index",
+      "name": "Student E-Index System",
+      "title": "RFID student e-index system",
+      "summary": "Student record system where tapping an RFID card pulls up a student's subjects, grades and attendance.",
+      "role": "Freelance developer",
+      "year": "2025",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap",
+        "Node.js",
+        "Express",
+        "MariaDB"
+      ],
+      "cardStack": [
+        "Node.js",
+        "Express",
+        "MariaDB"
+      ],
+      "links": {
+        "live": null,
+        "source": null
+      },
+      "stats": [
+        {
+          "value": "4",
+          "label": "database tables"
+        }
+      ],
+      "points": [
+        {
+          "label": "RFID lookup",
+          "text": "Tapping a student's RFID card opens their record straight away, with no searching."
+        },
+        {
+          "label": "Records",
+          "text": "Subjects, academic records and attendance are kept per student, with filtering and search."
+        }
+      ],
+      "images": [],
+      "org": "Freelance"
+    },
+    {
+      "slug": "library-visit-tracker",
+      "name": "Library Visit Tracker",
+      "title": "RFID library visit tracking system",
+      "summary": "A second library check-in system built for a different library, with duplicate-scan protection and bulk student import.",
+      "role": "Freelance developer",
+      "year": "2025",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Node.js",
+        "Express",
+        "MySQL"
+      ],
+      "cardStack": [
+        "Node.js",
+        "Express",
+        "MySQL"
+      ],
+      "links": {
+        "live": null,
+        "source": null
+      },
+      "stats": [
+        {
+          "value": "5 min",
+          "label": "duplicate check-in cooldown"
+        }
+      ],
+      "points": [
+        {
+          "label": "Check-in",
+          "text": "A second scan of the same card within 5 minutes is ignored, so double taps don't create duplicate visits."
+        },
+        {
+          "label": "Students",
+          "text": "Student records can be imported and exported in bulk, with search, filters and pagination."
+        }
+      ],
+      "images": [],
+      "org": "Freelance"
+    },
+    {
+      "slug": "appliance-repair-tracker",
+      "name": "Appliance Repair Tracker",
+      "title": "RFID appliance repair tracking system",
+      "summary": "Repair shop system where each appliance carries an RFID tag, so staff can scan it to see and update the repair job.",
+      "role": "Freelance developer",
+      "year": "2025",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Node.js",
+        "Express",
+        "MySQL"
+      ],
+      "cardStack": [
+        "Node.js",
+        "Express",
+        "MySQL"
+      ],
+      "links": {
+        "live": null,
+        "source": null
+      },
+      "stats": [],
+      "points": [
+        {
+          "label": "RFID tags",
+          "text": "Scanning an item's tag opens its repair job, customer details and status."
+        },
+        {
+          "label": "Repair history",
+          "text": "Every status change is logged, and jobs can be searched by tag and filtered by status, with pagination."
+        }
+      ],
+      "images": [],
+      "org": "Freelance"
     },
     {
       "slug": "gym-attendance-system",
@@ -2330,7 +2397,8 @@
           "text": "Each member has an expiry date and an active or expired status, shown on a live dashboard with dark and light themes."
         }
       ],
-      "images": []
+      "images": [],
+      "org": "Freelance"
     }
   ]
 }
