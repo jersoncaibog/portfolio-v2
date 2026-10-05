@@ -8,13 +8,14 @@ export type Work = {
   title: string;
   summary: string;
   role: string | null;
-  year: string;
+  year: string | null;
   stack: string[];
   cardStack: string[];
-  links: { live: string | null; source: string | null };
+  links: { live: string | null; admin?: string | null; source: string | null };
   stats: { value: string; label: string }[];
   points: { label: string; text: string }[];
   images: WorkImage[];
+  featured?: boolean;
 };
 
 export type TimelineItem = {
@@ -28,6 +29,10 @@ export type TimelineItem = {
 export const profile = data;
 
 export const work = data.work as Work[];
+
+// Homepage shows projects marked "featured": true, or the first 6 if none are marked.
+const flagged = work.filter((w) => w.featured);
+export const featuredWork = flagged.length > 0 ? flagged : work.slice(0, 6);
 
 export function getWork(slug: string) {
   return work.find((w) => w.slug === slug);

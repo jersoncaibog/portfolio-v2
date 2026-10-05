@@ -23,9 +23,10 @@ export function SectionLabel({ index, children, className }: { index?: string; c
   );
 }
 
-export function Chip({ children }: { children: ReactNode }) {
+export function Chip({ children, icon }: { children: ReactNode; icon?: ReactNode }) {
   return (
-    <span className="rounded-md border border-line-chip bg-surface-2 px-2.5 py-1 font-mono text-xs text-fg-3">
+    <span className="inline-flex items-center gap-1.5 rounded-md border border-line-chip bg-surface-2 px-2.5 py-1 font-mono text-xs text-fg-3">
+      {icon}
       {children}
     </span>
   );
@@ -35,7 +36,7 @@ export function ButtonLink({ className, ...props }: ComponentProps<"a">) {
   return (
     <a
       className={cx(
-        "inline-flex items-center justify-center gap-2 rounded-lg border border-line-strong bg-surface-2 px-3.5 py-2.5 text-sm font-medium text-fg transition-colors hover:border-accent/60 hover:text-white",
+        "inline-flex items-center justify-center gap-2 rounded-lg border border-line-strong bg-surface-2 px-3 py-1.5 text-sm font-medium text-fg transition-colors hover:border-accent/60 hover:text-white",
         className,
       )}
       {...props}

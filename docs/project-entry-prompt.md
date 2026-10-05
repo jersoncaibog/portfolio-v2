@@ -1,9 +1,10 @@
 # Prompt: write a portfolio project entry from a codebase
 
 Open Claude Code in the root of the project you want to add, and paste
-everything below the line. Claude reads the codebase and returns one JSON
-object to add to the `work` array in `src/data/profile.json` of the portfolio
-repo.
+everything below the line. Claude reads the codebase and saves one JSON
+object to `~/portfolio-entries/<slug>.json`. Ask the portfolio session to add
+the files from that folder to the `work` array in `src/data/profile.json`.
+Copying JSON out of the terminal can cut off lines, so use the files.
 
 ---
 
@@ -78,7 +79,11 @@ built, not the client's private business details.
 Writing style: short, concrete and plain. No marketing words like
 "seamless", "robust" or "cutting-edge". Numbers as digits.
 
-Return the JSON object first. After it, give me:
+Save the JSON object, and nothing else, to
+`~/portfolio-entries/<slug>.json` (create the folder if needed), and check
+the file parses as valid JSON. Don't write anything into this repository.
+
+Then show me the JSON object. After it, give me:
 
 1. How you counted each stat, with the files you used.
 2. Any fields you left `null` and what you need from me to fill them. Always
