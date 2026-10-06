@@ -1946,6 +1946,75 @@
       "org": "Prostrive BV"
     },
     {
+      "slug": "dbi-professionals",
+      "name": "DBI Professionals",
+      "title": "DBI Professionals website",
+      "summary": "Job board and company site for a finance and credit management staffing agency, built for candidates and hiring clients.",
+      "role": "Full Stack Developer, Prostrive BV",
+      "year": "2026",
+      "stack": [
+        "WordPress",
+        "PHP",
+        "ACF Pro",
+        "Tailwind CSS v4",
+        "Vite",
+        "Gravity Forms"
+      ],
+      "cardStack": [
+        "WordPress",
+        "Tailwind CSS",
+        "ACF Pro"
+      ],
+      "links": {
+        "live": null,
+        "source": null
+      },
+      "stats": [
+        {
+          "value": "16",
+          "label": "content blocks"
+        },
+        {
+          "value": "2",
+          "label": "custom post types"
+        },
+        {
+          "value": "7",
+          "label": "taxonomies"
+        },
+        {
+          "value": "12",
+          "label": "data seeders"
+        }
+      ],
+      "points": [
+        {
+          "label": "Architecture",
+          "text": "Each page section is a self-registering ACF block: a folder with block.json, fields defined in PHP and a Tailwind template, so fields ship with the code."
+        },
+        {
+          "label": "Job data",
+          "text": "Vacancies are a custom post type with 6 taxonomies. One card-data function feeds both the server-rendered lists and a filterable REST endpoint."
+        },
+        {
+          "label": "Content seeding",
+          "text": "A wp-admin Seed Runner builds pages, menus, forms and demo jobs from code, so staging needs no shell access. Page seeds skip pages already edited."
+        },
+        {
+          "label": "Integrations",
+          "text": "Applications run through the RecruitNow ATS widgets, which load only on pages that contain the apply or enrollment blocks."
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/dbi-professionals/1.webp",
+          "alt": "DBI Professionals homepage hero with navigation and candidate and client buttons",
+          "caption": "Homepage"
+        }
+      ],
+      "org": "Prostrive BV"
+    },
+    {
       "slug": "library-rfid-logbook",
       "name": "Library RFID Logbook",
       "title": "Library RFID logbook",
