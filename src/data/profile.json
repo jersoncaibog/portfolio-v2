@@ -2487,7 +2487,23 @@
           "text": "Each member has an expiry date and an active or expired status, shown on a live dashboard with dark and light themes."
         }
       ],
-      "images": [],
+      "images": [
+        {
+          "src": "/work/gym-attendance-system/1.webp",
+          "alt": "Dashboard with member counts, an RFID check-in field and recent attendance",
+          "caption": "Dashboard and RFID check-in"
+        },
+        {
+          "src": "/work/gym-attendance-system/2.webp",
+          "alt": "Members table with RFID tags, active or expired status and expiration dates",
+          "caption": "Members and membership expiry"
+        },
+        {
+          "src": "/work/gym-attendance-system/3.webp",
+          "alt": "Attendance records filtered by date range and member, with export",
+          "caption": "Attendance records"
+        }
+      ],
       "org": "Freelance"
     }
   ]
