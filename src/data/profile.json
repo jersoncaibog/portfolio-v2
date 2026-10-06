@@ -1233,6 +1233,68 @@
       "org": "Personal project"
     },
     {
+      "slug": "qa-engineer-portfolio",
+      "name": "QA Engineer Portfolio",
+      "title": "QA Engineer Portfolio Website",
+      "summary": "Portfolio website for a quality assurance engineer, presenting her experience, skills and a contact form.",
+      "role": "Frontend developer",
+      "year": "2025",
+      "stack": [
+        "Next.js 14",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Vercel"
+      ],
+      "cardStack": [
+        "Next.js",
+        "Tailwind CSS",
+        "Framer Motion"
+      ],
+      "links": {
+        "live": "https://grace-v1.vercel.app",
+        "source": null
+      },
+      "stats": [],
+      "points": [
+        {
+          "label": "Animation",
+          "text": "Scroll-triggered entrances and hover effects with Framer Motion, animating transforms so motion stays smooth."
+        },
+        {
+          "label": "Content",
+          "text": "All copy for the about, experience and contact sections lives in one config file, so updates need no component changes."
+        },
+        {
+          "label": "Responsive",
+          "text": "Mobile-first layout with a collapsing menu, built from reusable layout and text components."
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/qa-engineer-portfolio/1.webp",
+          "alt": "Hero and contact sections on mobile",
+          "caption": "Mobile hero and contact form"
+        },
+        {
+          "src": "/work/qa-engineer-portfolio/2.webp",
+          "alt": "Desktop hero with a large name heading and portrait",
+          "caption": "Desktop hero"
+        },
+        {
+          "src": "/work/qa-engineer-portfolio/3.webp",
+          "alt": "Experience timeline with roles and skill tags",
+          "caption": "Experience timeline"
+        },
+        {
+          "src": "/work/qa-engineer-portfolio/4.webp",
+          "alt": "Contact details and message form",
+          "caption": "Contact section"
+        }
+      ],
+      "org": "Personal project"
+    },
+    {
       "slug": "effectzorg-recruitment-site",
       "name": "Effectzorg recruitment site",
       "title": "Effectzorg — healthcare recruitment site",
