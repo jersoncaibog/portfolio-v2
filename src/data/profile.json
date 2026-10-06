@@ -1470,6 +1470,58 @@
       "org": "Personal project"
     },
     {
+      "slug": "arduino-smart-rc-car",
+      "name": "Arduino Smart RC Car",
+      "title": "Smart RC Car with Obstacle Detection",
+      "summary": "IR remote-controlled car on an Arduino Uno that stops on its own when an obstacle is close ahead.",
+      "role": "Embedded systems developer",
+      "year": "2023",
+      "stack": [
+        "Arduino Uno",
+        "C++",
+        "HC-SR04 ultrasonic sensor",
+        "L293D motor driver",
+        "IR remote"
+      ],
+      "cardStack": [
+        "Arduino",
+        "C++",
+        "Ultrasonic sensor"
+      ],
+      "links": {
+        "live": null,
+        "source": null
+      },
+      "stats": [],
+      "points": [
+        {
+          "label": "Safety stop",
+          "text": "The ultrasonic sensor measures distance continuously, and the car stops when something comes too close, even while the remote says go."
+        },
+        {
+          "label": "Motor control",
+          "text": "An L293D H-bridge drives 2 DC motors forward, backward and through turns, with PWM speed control."
+        },
+        {
+          "label": "Remote control",
+          "text": "An IR receiver decodes button presses from a standard TV remote and maps them to driving commands."
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/arduino-smart-rc-car/1.webp",
+          "alt": "Two-wheel robot car with an Arduino Uno, motor driver and ultrasonic sensor on an acrylic chassis",
+          "caption": "Arduino Uno, L293D driver and HC-SR04 sensor"
+        },
+        {
+          "src": "/work/arduino-smart-rc-car/2.webp",
+          "alt": "The RC car held next to a laptop showing the Arduino code",
+          "caption": "Uploading and testing the code"
+        }
+      ],
+      "org": "ESSU"
+    },
+    {
       "slug": "ras-recruitment",
       "name": "RAS Recruitment",
       "title": "RAS Recruitment website",
