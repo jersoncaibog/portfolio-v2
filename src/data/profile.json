@@ -1208,7 +1208,23 @@
           "text": "Started as a Node.js script that converted the CSV records to JSON and fitted a linear regression, then grew into the web app."
         }
       ],
-      "images": [],
+      "images": [
+        {
+          "src": "/work/temperature-forecaster/1.webp",
+          "alt": "Forecast for 2030 using polynomial regression, with the historical temperature chart and prediction trend",
+          "caption": "Polynomial regression forecast"
+        },
+        {
+          "src": "/work/temperature-forecaster/2.webp",
+          "alt": "Forecast for 2030 using linear regression, with its equation and model confidence",
+          "caption": "Linear regression forecast"
+        },
+        {
+          "src": "/work/temperature-forecaster/3.webp",
+          "alt": "Forecast for 2030 using a 5-year moving average over smoothed historical data",
+          "caption": "5-year moving average forecast"
+        }
+      ],
       "org": "Personal project"
     },
     {
