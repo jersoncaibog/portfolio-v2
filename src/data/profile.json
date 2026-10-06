@@ -36,7 +36,7 @@
           "highlights": [
             {
               "label": "Architecture",
-              "text": "Built and shipped a multi-tenant platform running 8 production deployments (4 public streamer sites, 4 admin panels) from one Turborepo codebase and database, with a shared typed API layer of 65+ functions."
+              "text": "Built a multi-tenant platform for four streamer brands on one Turborepo codebase and database, with a shared typed API layer of 65+ functions. The first brand, HugoToPG, is live with its public site and admin panel."
             },
             {
               "label": "Database & Security",
@@ -190,14 +190,14 @@
       "location": "Eastern Samar, Philippines",
       "start": "2022",
       "end": "2026",
-      "gpa": "3.75",
+      "gwa": "1.50",
       "honors": [
         "Cum Laude"
       ],
       "short": {
         "degree": "BS Information Technology",
         "school": "ESSU Guiuan",
-        "blurb": "Cum Laude, GPA 3.75. ITSO 2024 Programming and Webpage Design champion."
+        "blurb": "Cum Laude, GWA 1.50. ITSO 2024 Programming and Webpage Design champion."
       }
     }
   ],
@@ -340,7 +340,7 @@
       "slug": "affiliate-giveaway-platform",
       "name": "Affiliate & Giveaway Platform",
       "title": "Multi-Tenant Affiliate & Giveaway Platform",
-      "summary": "One codebase and database running eight production sites: four streamer sites and their admin panels.",
+      "summary": "One codebase and database built to serve four streamer brands. The first, HugoToPG, is live with its public site and admin panel.",
       "role": "Full Stack Developer, Prostrive BV",
       "year": "2026",
       "stack": [
@@ -363,8 +363,8 @@
       },
       "stats": [
         {
-          "value": "8",
-          "label": "production deployments"
+          "value": "2",
+          "label": "live deployments (site + admin)"
         },
         {
           "value": "18",
@@ -382,7 +382,7 @@
       "points": [
         {
           "label": "Architecture",
-          "text": "Four streamer sites and four admin panels from one Turborepo codebase and database, sharing a typed API layer."
+          "text": "One Turborepo codebase and database designed for four streamer brands, sharing a typed API layer. HugoToPG's site and admin panel are live."
         },
         {
           "label": "Database & security",
