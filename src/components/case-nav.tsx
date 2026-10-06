@@ -5,16 +5,20 @@ import { useSearchParams } from "next/navigation";
 import { Suspense, type ComponentProps } from "react";
 import { ArrowLeftIcon } from "./icons";
 
-// Case studies opened from /projects carry ?from=projects, so the back link
-// returns there. Anything else (homepage, direct visit) goes back home.
-function useFromProjects() {
-  return useSearchParams().get("from") === "projects";
+// Case studies opened from /projects carry ?from=projects (plus &sort=date when
+// the list was sorted by date), so the back link returns to the same list.
+// Anything else (homepage, direct visit) goes back home.
+function useListContext() {
+  const params = useSearchParams();
+  const fromProjects = params.get("from") === "projects";
+  const byDate = fromProjects && params.get("sort") === "date";
+  return { fromProjects, byDate };
 }
 
-function BackLinkView({ fromProjects }: { fromProjects: boolean }) {
+function BackLinkView({ fromProjects, byDate = false }: { fromProjects: boolean; byDate?: boolean }) {
   return (
     <Link
-      href={fromProjects ? "/projects" : "/"}
+      href={fromProjects ? (byDate ? "/projects?sort=date" : "/projects") : "/"}
       className="inline-flex items-center gap-1.5 self-start py-1 font-mono text-[13px] text-subtle hover:text-fg"
     >
       <ArrowLeftIcon size={14} />
@@ -24,7 +28,7 @@ function BackLinkView({ fromProjects }: { fromProjects: boolean }) {
 }
 
 function BackLinkInner() {
-  return <BackLinkView fromProjects={useFromProjects()} />;
+  return <BackLinkView {...useListContext()} />;
 }
 
 export function BackLink() {
@@ -38,11 +42,12 @@ export function BackLink() {
 type NextLinkProps = Omit<ComponentProps<typeof Link>, "href"> & { slug: string };
 
 function NextLinkInner({ slug, ...props }: NextLinkProps) {
-  const query = useFromProjects() ? "?from=projects" : "";
+  const { fromProjects, byDate } = useListContext();
+  const query = fromProjects ? (byDate ? "?from=projects&sort=date" : "?from=projects") : "";
   return <Link href={`/work/${slug}${query}`} {...props} />;
 }
 
-// Keeps the ?from=projects context when moving to the next case study.
+// Keeps the list context (?from=projects, ?sort=date) when moving to the next case study.
 export function NextProjectLink(props: NextLinkProps) {
   return (
     <Suspense fallback={<Link href={`/work/${props.slug}`} {...props} />}>

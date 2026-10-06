@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeftIcon, ArrowRightIcon, ImagesIcon } from "@/components/icons";
-import { Card, ImagePlaceholder, MetaBadges, SectionLabel } from "@/components/ui";
+import { ArrowLeftIcon } from "@/components/icons";
+import { ProjectList } from "@/components/project-list";
+import { Card } from "@/components/ui";
 import { profile, work } from "@/lib/profile";
 
 export const metadata: Metadata = {
@@ -25,53 +25,7 @@ export default function Projects() {
       </Card>
 
       <Card className="col-span-12 flex flex-col p-3.5 sm:p-6">
-        <SectionLabel className="mb-2 px-1 sm:px-0">Projects</SectionLabel>
-        <ul>
-          {work.map((item) => {
-            const cover = item.images[0];
-            return (
-              <li key={item.slug} className="border-t border-line-soft first:border-t-0">
-                <Link
-                  href={`/work/${item.slug}?from=projects`}
-                  className="group grid grid-cols-[96px_minmax(0,1fr)] items-center gap-4 rounded-lg px-1 py-3.5 transition-colors hover:bg-surface-2 sm:grid-cols-[200px_minmax(0,1fr)_auto] sm:gap-6 sm:px-2"
-                >
-                  <div className="relative aspect-16/10 overflow-hidden rounded-[5px]">
-                    {cover ? (
-                      <Image
-                        src={cover.src}
-                        alt={cover.alt}
-                        fill
-                        sizes="(min-width: 640px) 200px, 96px"
-                        className="border border-line object-cover"
-                      />
-                    ) : (
-                      <ImagePlaceholder className="size-full rounded-[5px]" />
-                    )}
-                    {item.images.length > 1 && (
-                      <span className="absolute right-1.5 bottom-1.5 flex items-center gap-1 rounded-[4px] border border-line-strong bg-bg/85 px-1 font-mono text-[10px] text-fg-3">
-                        <ImagesIcon size={10} />
-                        {item.images.length}
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="flex min-w-0 flex-col gap-1.5 sm:gap-2">
-                    <h2 className="text-sm font-semibold group-hover:text-white sm:text-[15px]">{item.name}</h2>
-                    <p className="hidden text-sm leading-relaxed text-muted sm:block">{item.summary}</p>
-                    <p className="font-mono text-[11px] text-subtle sm:text-xs">{item.cardStack.join(" · ")}</p>
-                    <div className="pt-1">
-                      <MetaBadges year={item.year} org={item.org} />
-                    </div>
-                  </div>
-
-                  <div className="hidden items-center sm:flex">
-                    <ArrowRightIcon size={18} className="text-accent transition-transform group-hover:translate-x-0.5" />
-                  </div>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+        <ProjectList items={work} />
       </Card>
 
       <footer className="col-span-12 flex flex-wrap justify-between gap-2 px-1 py-2.5 font-mono text-xs text-faint">
