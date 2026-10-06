@@ -609,6 +609,11 @@
       ],
       "images": [
         {
+          "src": "/work/gesture-smart-home/5.webp",
+          "alt": "Dashboard with a live camera stream detecting a two-finger hand gesture, next to smart device toggles for a light, ceiling fan and television",
+          "caption": "Live gesture detection switching on the ceiling fan"
+        },
+        {
           "src": "/work/gesture-smart-home/1.webp",
           "alt": "Live demo of the gesture controls at the capstone defense",
           "caption": "Live demo at the capstone defense"
