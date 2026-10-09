@@ -1,15 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRightIcon, FileDownIcon, GitHubIcon, ImagesIcon, LinkedInIcon, MailIcon, PhoneIcon } from "@/components/icons";
+import { ArrowRightIcon, ArrowUpRightIcon, FileDownIcon, GitHubIcon, ImagesIcon, LinkedInIcon, MailIcon, PhoneIcon } from "@/components/icons";
+import { ContributionGraph } from "@/components/contributions";
 import { TechIcon } from "@/components/tech-icon";
 import { ButtonLink, Card, Chip, ImagePlaceholder, MetaBadges, SectionLabel } from "@/components/ui";
+import { getContributions } from "@/lib/github";
 import { featuredWork, formatDuration, formatRange, profile, timeline } from "@/lib/profile";
 
 // Re-render daily so "Now" durations stay current.
 export const revalidate = 86400;
 
-export default function Home() {
+export default async function Home() {
   const { contact, links } = profile;
+  const githubLogin = new URL(links.github).pathname.split("/").filter(Boolean)[0];
+  const contributions = await getContributions(githubLogin);
   const phoneHref = `tel:${contact.phone.replace(/\s/g, "")}`;
 
   return (
@@ -159,6 +163,25 @@ export default function Home() {
           })}
         </ul>
       </Card>
+
+      {/* GitHub */}
+      {contributions && (
+        <Card id="github" className="flex flex-col gap-4">
+          <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+            <SectionLabel index="05">Github</SectionLabel>
+            <a
+              href={links.github}
+              target="_blank"
+              rel="noreferrer"
+              className="group inline-flex items-center gap-1.5 font-mono text-xs text-subtle hover:text-fg sm:text-[13px]"
+            >
+              @{githubLogin}
+              <ArrowUpRightIcon size={13} className="text-accent" />
+            </a>
+          </div>
+          <ContributionGraph calendar={contributions} />
+        </Card>
+      )}
 
       <footer className="flex flex-wrap justify-between gap-2 px-1 py-2.5 font-mono text-xs text-faint">
         <span>© {new Date().getFullYear()} {profile.name}</span>

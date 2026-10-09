@@ -56,4 +56,6 @@ npm run lint
 npm run build   # production build; every page is prerendered
 ```
 
+The homepage's GitHub section reads the contribution graph from GitHub's GraphQL API and refreshes it daily. It needs a `GITHUB_TOKEN` environment variable: a fine-grained personal access token with read-only access to public repositories. Put it in `.env.local` for development and in the Vercel project's environment variables for production. Without it, the section is left out.
+
 This project uses Next.js 16, which has breaking changes from earlier versions. See [`AGENTS.md`](AGENTS.md) and the bundled docs in `node_modules/next/dist/docs/` before changing framework code.
